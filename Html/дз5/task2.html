@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        table {
+            width: 400px;
+            height: 200px;
+            border: 3px solid rgb(39, 125, 223);
+            border-spacing: 5px;
+            border: none;
+            margin: 0 auto;
+
+        }
+
+        :hover tr,
+        :hover #header1,
+        :hover #header2,
+        :hover #header3 {
+            color: transparent;
+            transition: 5s linear;
+        }
+
+        #header1 {
+            background-color: rgb(173, 66, 34);
+            color: white;
+            font-weight: bold;
+            text-align: center;
+
+        }
+
+        th {
+
+            border: 2px solid rgb(39, 125, 223);
+        }
+
+        td {
+            width: 150px;
+            height: 20px;
+            border: 2px solid rgb(39, 125, 223);
+        }
+
+        #header2 {
+            background-color: rgb(112, 173, 63);
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #header3 {
+            background-color: rgb(34, 90, 173);
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #col1 {
+            vertical-align: text-top;
+            text-align: center;
+            background-color: rgb(245, 169, 146);
+            font-weight: bold;
+        }
+
+        #col2 {
+            vertical-align: text-top;
+            text-align: center;
+            background-color: rgb(179, 233, 135);
+            font-weight: bold;
+        }
+
+        #col3 {
+            vertical-align: text-top;
+            text-align: center;
+            background-color: rgb(137, 179, 243);
+            font-weight: bold;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <table cellpadding="3px" cellspacing="0">
+        <tr>
+            <td id="header1">id="header1"</td>
+            <td id="header2">id="header2"</td>
+            <td id="header3">id="header3"</td>
+        </tr>
+        <tr>
+            <td id="col1" rowspan="5">id="col1"</td>
+            <td id="col2" rowspan="5">id="col2"</td>
+            <td id="col3" rowspan="5">id="col3"</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+
+    </table>
+
+</body>
+
+</html>

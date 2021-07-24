@@ -1,0 +1,176 @@
+.right {
+    width: 62%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    margin-top: 90px;
+    margin-left: 40px;
+
+}
+
+.about h3 {
+    margin: 0;
+    width: 800px;
+    font-size: 30px;
+    font-family: 'Playfair Display SC', serif;
+    border-bottom: rgb(81, 100, 128) solid 3px;
+}
+
+.about::before {
+    content: "";
+    padding-right: 15px;
+    width: 35px;
+    height: 40px;
+    background-image: url(img/about\ me.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+p {
+    margin-top: 20px;
+}
+
+.bio {
+    font-size: 19px;
+    width: 800px;
+    margin-top: 0;
+    margin-left: 40px;
+    font-family: 'Comfortaa', cursive;
+    word-break: break-all;
+    color: rgb(68, 68, 68);
+}
+
+.Education {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    margin-top: 40px;
+    margin-left: 40px;
+
+}
+
+.Education h3 {
+    margin: 0;
+    width: 800px;
+    font-size: 30px;
+    font-family: 'Playfair Display SC', serif;
+    border-bottom: rgb(81, 100, 128) solid 3px;
+}
+
+.Education::before {
+    content: "";
+    padding-right: 15px;
+    width: 35px;
+    height: 40px;
+    background-image: url(img/образование@288x.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.school1 {
+    display: flex;
+    align-items: center;
+    width: 800px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.school1 h3 {
+    margin: 0;
+    width: 800px;
+    font-size: 25px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.school1 h5 {
+    width: 265px;
+    font-size: 18px;
+    margin: 0;
+    font-family: 'Poiret One', cursive;
+
+}
+
+.Experience {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    margin-top: 40px;
+    margin-left: 40px;
+
+}
+
+.Experience h3 {
+    margin: 0;
+    width: 800px;
+    font-size: 30px;
+    font-family: 'Playfair Display SC', serif;
+    border-bottom: rgb(81, 100, 128) solid 3px;
+}
+
+.Experience::before {
+    content: "";
+    padding-right: 15px;
+    width: 35px;
+    height: 40px;
+    background-image: url(img/опыт\ работы@288x.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.Skills {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    margin-top: 40px;
+    margin-left: 40px;
+
+}
+
+.Skills h3 {
+    margin: 0;
+    width: 800px;
+    font-size: 30px;
+    font-family: 'Playfair Display SC', serif;
+    border-bottom: rgb(81, 100, 128) solid 3px;
+}
+
+.Skills::before {
+    content: "";
+    padding-right: 15px;
+    width: 35px;
+    height: 40px;
+    background-image: url(img/навыки@288x.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.Skills2 {
+    width: 300px;
+    height: 60px;
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 50px;
+
+}
+.row{
+    display: flex;
+
+}

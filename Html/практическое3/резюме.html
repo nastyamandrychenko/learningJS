@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About me</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        .conteiner {
+            width: 100%;
+            margin: 0 auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            user-select: none;
+
+        }
+
+        .left {
+            width: 40%;
+            height: 1600px;
+            display: flex;
+            flex-direction: column;
+            background-image: url(img/бол\ фон.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .right {
+            width: 60%;
+
+            display: flex;
+            flex-direction: column;
+            background-image: url(img/фон.png);
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+
+        }
+
+        .top {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image {
+            width: 240px;
+            margin: 0 auto;
+            position: relative;
+            top: 100px;
+
+        }
+
+        img {
+            width: 240px;
+            border: 8px solid white;
+            border-radius: 15px;
+        }
+
+        .right::after {
+            content: "";
+            width: 70px;
+            height: 80px;
+            background-image: url(img/треугольник.png);
+            background-size: 70px;
+            position: relative;
+            top: 180px;
+            right: 2px;
+        }
+
+
+        .contact2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            color: white;
+            letter-spacing: 13px;
+
+        }
+
+        .contact {
+            width: 230px;
+            margin: 0 auto;
+
+        }
+
+        .bottomblock {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .h1 {
+            width: 300px;
+            height: auto;
+            position: relative;
+            left: 190px;
+            font-size: 17px;
+            color: white;
+            font-family: 'Mate SC', serif;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .h1::before {
+            content: "";
+            width: 35px;
+            height: 35px;
+            background-image: url(img/Тел.png);
+            background-size: 35px;
+
+            margin-right: 20px;
+        }
+
+        .h2 {
+            width: 300px;
+            height: auto;
+            position: relative;
+            left: 190px;
+            font-size: 17px;
+            color: white;
+            font-family: 'Mate SC', serif;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .h2::before {
+            content: "";
+            width: 35px;
+            height: 35px;
+            background-image: url(img/почта.png);
+            background-size: 35px;
+
+            margin-right: 20px;
+        }
+
+        .h3 {
+            width: 300px;
+            height: auto;
+            position: relative;
+            left: 190px;
+            font-size: 17px;
+            color: white;
+            font-family: 'Mate SC', serif;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .h3::before {
+            content: "";
+            width: 35px;
+            height: 35px;
+            background-image: url(img/почта.png);
+            background-size: 35px;
+
+            margin-right: 20px;
+        }
+        .ed{
+            margin: 0 auto;
+        }
+        .ed h2{
+            font-size: 25px;
+           color: white;
+           font-family: 'Cabin', sans-serif;
+        }
+        .ed h5{
+            margin-top: 0;
+            font-size: 15px;
+           color: white;
+           font-family: 'Quicksand', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="left">
+            <div class="top">
+                <div class="image">
+                    <img src="img/ава.jpg" alt="">
+                </div>
+            </div>
+
+
+            <div class="bottomblock">
+                <div class="contact">
+                    <h2 class="contact2">Контакты</h2>
+                </div>
+                <div class="h1">
+                    <h3>+123 456 789 101</h3>
+                </div>
+                <div class="h2">
+                    <h3>name@gmail.com</h3>
+                </div>
+                <div class="h3">
+                    <h3>www.mysite.com</h3>
+                </div>
+                <div class="contact" style="margin-top: 40px;" >
+                    <h2 class="contact2" style="position: relative; right: 40px;">Образование</h2>
+                </div>
+                <div class="ed">
+                    <h2>ITDVN</h2>
+                    <h5>JavaScript Developer</h5>
+                    <h5>Sept 20- March 21</h5>
+                </div>
+
+                <div class="ed">
+                    <h2>CyberBionic</h2>
+                    <h5>JavaScript Developer</h5>
+                    <h5>Sept 20- March 21</h5>
+                </div>
+                <div class="ed">
+                    <h2>HAY</h2>
+                    <h5>JavaScript Developer</h5>
+                    <h5>Sept 20- March 21</h5>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+    
+
+    <div class="right">
+
+    </div>
+    </div>
+
+</body>
+
+</html>

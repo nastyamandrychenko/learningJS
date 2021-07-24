@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Спортивные новости</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <style>
+        body {
+
+            width: 100%;
+            background-image: url(img/газетная\ бумага.jpg);
+            background-size: 100%;
+           
+        }
+
+        .conteiner {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .div1 {
+            width: 100%;
+            height: 160px;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .div1 h1 {
+            font-family: 'Marko One', serif;
+            font-size: 90px;
+            position: relative;
+            left: 30px;
+            top: -37px;
+        }
+
+
+        .div1 h5 {
+
+            position: relative;
+            top: 35px;
+            left: -30px;
+            font-size: 46px;
+            font-family: 'IM Fell English SC', serif;
+            margin-bottom: 0;
+
+
+        }
+
+        .menu {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 30px;
+        }
+
+
+        .el {
+            margin: 3px;
+        }
+
+        .home a{
+            font-family: 'Marko One', serif;
+            font-weight: bold;
+            font-size: 30px;
+            text-transform: uppercase;
+            background: #000;
+            color: #FFF;
+            mix-blend-mode: multiply;
+            padding: 10px;
+            text-decoration:none ;
+        }
+        .home a:hover{
+            background-image: url(img/home.jpg);
+            background-size: 120px;
+            background-repeat: no-repeat;
+            color: rgb(255, 255, 255);
+            mix-blend-mode: normal;
+        }
+
+        .football a{
+            font-family: 'Marko One', serif;
+            font-weight: bold;
+            font-size: 30px;
+            text-transform: uppercase;
+            background: #000;
+            color: #FFF;
+            mix-blend-mode: multiply;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .football a:hover{
+            background-image: url(img/football.jpg);
+            background-size: 220px;
+            background-position-y: -50px;
+            background-repeat: no-repeat;
+            color: rgb(255, 255, 255);
+            mix-blend-mode: normal;
+        }
+
+        .cricket a{
+            font-family: 'Marko One', serif;
+            font-weight: bold;
+            font-size: 30px;
+            text-transform: uppercase;
+            background: #000;
+            color: #FFF;
+            mix-blend-mode: multiply;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .cricket a:hover{
+            background-image: url(img/cricket.jpg);
+            background-size: 200px;
+            background-position-y: -30px;
+            background-repeat: no-repeat;
+            color: rgb(255, 255, 255);
+            mix-blend-mode: normal;
+        }
+
+        .tennis a{
+            font-family: 'Marko One', serif;
+            font-weight: bold;
+            font-size: 30px;
+            text-transform: uppercase;
+            background: #000;
+            color: #FFF;
+            mix-blend-mode: multiply;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .tennis a:hover{
+            background-image: url(img/tennis.jpg);
+            background-size: 150px;
+            background-repeat: no-repeat;
+            color: rgb(255, 255, 255);
+            mix-blend-mode: normal;
+        }
+
+        .golf a{
+            font-family: 'Marko One', serif;
+            font-weight: bold;
+            font-size: 30px;
+            text-transform: uppercase;
+            background: #000;
+            color: #FFF;
+            mix-blend-mode: multiply;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .golf a:hover{
+            background-image: url(img/golf.jpg);
+            background-size: 120px;
+            background-repeat: no-repeat;
+            color: rgb(255, 255, 255);
+            mix-blend-mode: normal;
+        }
+
+        .cycling a{
+            font-family: 'Marko One', serif;
+            font-weight: bold;
+            font-size: 30px;
+            text-transform: uppercase;
+            background: #000;
+            color: #FFF;
+            mix-blend-mode: multiply;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .cycling a:hover{
+            background-image: url(img/cycling.jpg);
+            background-size: 170px;
+            background-position-y:-60px ;
+            background-repeat: no-repeat;
+            color: rgb(255, 255, 255);
+            mix-blend-mode: normal;
+        }
+        .div2{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        .img{
+            width: 600px;
+            height: 400px;
+            background-size: 600px;
+            background-image: url(img/t1D.gif);
+            filter: sepia(100%);
+            margin-top: 50px;
+            margin-left: 20px;
+            border: 10px double black;
+            
+        }
+        .golf2 h4{
+            font-family: 'Almendra SC', serif;
+            background-color: black;
+            color: white;
+            margin-left: 20px;
+            position: relative;
+            top: -30px;
+            padding: 5px;
+            padding-left: 20px;
+            font-size: 17px   
+            
+        }
+        .text{
+            width: 700px;
+            height: auto;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+        .text h3{
+            font-family: 'Rye', cursive;
+            font-size: 30px;
+        }
+        .text p{
+            font-family: 'Almendra SC', serif;
+            font-size: 26px;
+        }
+        .news{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            font-size: 50px;
+            margin-left: 80px;
+            margin-bottom: 30px;
+            font-family: 'Rye', cursive;
+        }
+        .div3{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content:space-between;
+            margin-bottom: 200px;
+        }
+        .n1{
+            width: 400px;
+            height: 450px;
+            margin-right: 40px;
+            
+        }
+        .img3{
+            width: 400px;
+            height: 220px;
+            background-image: url(img/2.jpg);
+            background-size: 400px;
+            filter: sepia(100%);
+            margin-left: 30px;
+            border: black 5px double;
+        }
+        .n1 h4{
+            font-family: 'Rye', cursive;
+            font-size: 20px;
+            margin-left: 30px;
+        }
+        .n1 p{
+            font-family: 'Almendra SC', serif;
+            font-size: 20px; 
+            margin-left: 30px;
+            
+        }
+        .n2{
+            width: 400px;
+            height: 450px;
+            margin-right: 40px;
+        }
+        .img4{
+            width: 400px;
+            height: 220px;
+            background-image: url(img/3.jpg);
+            background-size: 400px;
+            filter: sepia(100%);
+            margin-left: 30px;
+            border: black 5px double;
+            
+        }
+        .n2 h4{
+            font-family: 'Rye', cursive;
+            font-size: 20px;
+            margin-left: 30px;
+        }
+        .n2 p{
+            font-family: 'Almendra SC', serif;
+            font-size: 20px; 
+            margin-left: 30px;
+        }
+        .n3{
+            width: 400px;
+            height: 450px;
+            margin-right: 40px;
+        }
+        .img5{
+            width: 400px;
+            height: 220px;
+            background-image: url(img/4.jpg);
+            background-size: 400px;
+            filter: sepia(100%);
+            margin-left: 30px;
+            border: black 5px double;
+            
+        }
+        .n3 h4{
+            font-family: 'Rye', cursive;
+            font-size: 20px;
+            margin-left: 30px;
+        }
+        .n3 p{
+            font-family: 'Almendra SC', serif;
+            font-size: 20px; 
+            margin-left: 30px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="conteiner">
+
+        <div class="div1">
+            <h1>BIG</h1>
+            <h5>Sport</h5>
+            <div class="menu">
+                <div class="el home"><a href="#">Home</a></div>
+                <div class="el football"><a href="#">Football</a></div>
+                <div class="el cricket"><a href="#">Cricket</a></div>
+                <div class="el tennis"><a href="#">Tennis</a></div>
+                <div class="el golf"><a href="#">Golf</a></div>
+                <div class="el cycling"><a href="#">Cycling</a></div>
+            </div>
+
+
+
+        </div>
+        <div class="div2">
+            <div class="golf2">
+                <div class="img"></div>
+                <h4>Premier Golf League</h4>
+            </div>
+            <div class="text">
+                <h3>Premier Golf League: Revolutionary £250m series scheduled to begin in 2023</h3>
+                <p>BBC Sport has learned that the Formula 1 style global competition is scheduled to begin in January 2023 and would include 18 tournaments targeting the top 48 male players in the world.
+
+                    A dozen of those events would be staged in the United States with the others "chasing the sun" around the world. Each competition would be worth $20m (£14m) with $4m going to the winner and last place picking up $150,000.
+                    
+                    By way of comparison, the biggest purse on the PGA Tour for a single event is $2.7m from a $15m prize fund at the Players Championship.
+                    
+                    There would be a team...  <a href="#" style="color: black; text-decoration: underline black;">Read MORE</a></p>
+            </div>
+            
+            </div>
+      <div class="news">News</div>
+      <div class="div3">
+          <div class="n1">
+              <div class="img3"></div>
+              <h4>French Open: Coco Gauff & Iga Swiatek into quarter-finals at Roland Garros</h4>
+              <p>American Gauff, who won the 2018 junior title here, dominated Tunisia's Ons Jabeur to win 6-3 6-1.
+
+                Greece's Maria Sakkari knocked out last year's runner-up and fourth seed Sofia Kenin 6-1 6-3, while Barbora Krejcikova thrashed Sloane Stephens 6-2 6-0.
+                
+                It means eighth seed Swiatek is the highest ranked woman left.
+                
+                The Polish defending champion, 20, beat Ukraine's Marta Kostyuk 6-3 6-4 and will face Sakkari on Wednesday.
+                
+                Kostyuk, 18, was... <a href="#" style="color: black; text-decoration: underline black;">Read MORE</a></p>
+          </div>
+          <div class="n2">
+            <div class="img4"></div>
+            <h4>French Open 2021: Alfie Hewett wins wheelchair singles title at Roland Garros</h4>
+            <p>Hewett, 23, beat the Japanese 6-3 6-4 to claim his fifth Grand Slam singles title.
+
+                It was his second title at this year's tournament after he and compatriot Gordon Reid successfully defended their doubles crown on Sunday.
+                
+                But Britain's Jordanne Whiley was beaten in the women's doubles final.
+                
+                She and Japanese partner Yui Kamiji lost 6-3 6-4 to Dutch top seeds Diede de Groot and Aniek van Koot.
+                
+                Hewett had said after his comeback win over Gustavo Fernandez... <a href="#" style="color: black; text-decoration: underline black;">Read MORE</a></p>
+        </div>
+
+          
+          <div class="n3">
+            <div class="img5"></div>
+            <h4>MLB: Trevor Bauer & the $40m brain behind baseball's biggest bluff</h4>
+            <p>Trevor Bauer, who will reportedly earn $40m playing for the Los Angeles Dodgers this year, is not one of the fastest pitchers in the sport. Instead, he is one of the smartest: a master of disguise.
+
+                As he walks up to the plate he has one aim in mind - how to deceive the batter standing 60 feet and six inches away.
+                
+                "I never really threw hard growing up, so I learned from a young age that I had to mix speeds and shapes," says Bauer, who won the Cy Young Award for the best .... <a href="#" style="color: black; text-decoration: underline black;">Read MORE</a></p>
+        </div>
+          
+          <div class="n4"></div>
+      </div>
+    </div>
+
+</body>
+
+</html>

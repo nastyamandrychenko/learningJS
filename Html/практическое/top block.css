@@ -1,0 +1,38 @@
+#avatar {
+    width: 220px;
+    border-radius: 50%;
+    margin-top: 70px;
+    margin-bottom: 30px;
+
+
+}
+.name1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 30px;
+    padding: 0;
+    padding-bottom: 5px;
+    margin: 0;
+
+
+
+}
+.name2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 4px;
+}
+.topblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+}
+.name3 {
+    font-size: 18px;
+    margin: 0;
+    padding-top: 10px;
+    color: rgba(184, 40, 40, 0.637);
+    font-family: 'Merienda', cursive;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Your information</title>
+    <style>
+        div {
+            width: 600px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        legend {
+            color: rgb(0, 0, 119);
+            font-weight: bold;
+            font-size: 25px;
+            padding: 20px;
+
+
+
+        }
+
+        fieldset {
+            border-width: 1px 0 0 0;
+            border-color: rgb(179, 179, 179);
+            margin-top: 30px;
+
+
+
+        }
+
+        input {
+            display: block;
+            position: relative;
+            right: -200px;
+            top: -27px;
+        }
+
+        .choose {
+            border: solid 2px gray;
+            border-left: 2px solid black;
+            width: 350px;
+            height: 30px;
+            padding: 3px;
+            margin: 5px;
+            position: relative;
+            right: -194px;
+            top: -50px;
+
+
+
+        }
+
+        button {
+            padding: 5px 20px 5px 20px;
+            font-size: 20px;
+            background-color: rgb(0, 194, 10);
+            border: 2px solid rgb(0, 194, 10) ;
+            border-radius: 3px;
+            position: relative;
+            right: -330px;
+            top: -20px;
+            
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form method="GET" enctype="text/plain" action="">
+            <fieldset>
+                <legend>Personal information</legend>
+                <p><label for="First name" style="padding: 30px;  font-size: 20px; font-weight: bold;">*First
+                        name:</label>
+                    <input type="text" id="First name" style="border-left: 2px solid black; width: 350px; height: 30px;"
+                        required>
+                </p>
+
+                <p><label for="Middle name" style="padding: 30px;  font-size: 20px;"> Middle
+                        name:</label>
+                    <input id="Middle name" style="border-left: 2px solid black; width: 350px; height: 30px;"></label>
+                </p>
+                <p>
+                    <label for="Last name" style="padding: 30px;   font-size: 20px; font-weight: bold;">*Last
+                        name:</label>
+                    <input type="text" id="Last name" style="border-left: 2px solid black; width: 350px; height: 30px;"
+                        required>
+                </p>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Address</legend>
+                <p><label for="Address" style="padding: 30px;   font-size: 20px; ">Address:</label>
+                    <input type="text" id="Address" style="border-left: 2px solid black; width: 350px; height: 30px;"
+                        required>
+
+                </p>
+
+                <p><label for="City of town" style="padding: 30px;  font-size: 20px;"> City of
+                        town:</label>
+                    <input id="City of town" style="border-left: 2px solid black; width: 350px; height: 30px;"></label>
+                </p>
+
+                <p>
+                    <label for="State" style="padding: 30px;  font-size: 20px;"> State:</label>
+                <div class="choose"><select id="State" name="state"
+                        style="border: none; width: 350px; height: 30px; font-size: 20px; ">
+                        <option disabled selected>Choose a state</option>
+                        <option>Zhytomyr</option>
+                        <option>Katerynoslav</option>
+                        <option>Kyiv</option>
+                        <option>Kamianets</option>
+                        <option>Poltava</option>
+                        <option>Kharkiv</option>
+                        <option>Kherson</option>
+                        <option>Brest-Litovsk</option>
+                        <option>Chernihiv</option>
+                        <option>Mozyr</option>
+                        <option>Berdiansk</option>
+                        <option>...</option>
+
+
+                    </select>
+
+                </div>
+                </p>
+                <p>
+                    <label for="*Zip Code" style="padding: 30px;  font-size: 20px; font-weight: bold;">*Zip
+                        Code:</label>
+                    <input type="text" id="*Zip Code" style="border-left: 2px solid black; width: 350px; height: 30px;"
+                        required>
+                </p>
+            </fieldset>
+
+            <button type="submit">Send</button>
+
+
+        </form>
+    </div>
+</body>
+
+</html>

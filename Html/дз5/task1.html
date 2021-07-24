@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>По шаблону block</title>
+    <style>
+        span {
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .block {
+
+            width: 1000px;
+            height: 800px;
+            margin: 100px auto;
+        }
+
+        .first {
+            height: 150px;
+            width: 1000px;
+            background-color: rgb(72, 155, 141);
+        }
+
+        .second {
+            height: 80px;
+            width: 1000px;
+            background-color: rgb(255, 88, 144);
+        }
+
+        .third {
+            height: 470px;
+            width: 300px;
+            background-color: rgb(116, 255, 111);
+            float: left;
+        }
+
+        .fourth {
+            height: 470px;
+            width: 700px;
+            float: left;
+            background-color: rgb(155, 155, 155);
+        }
+
+        .fifth {
+            height: 100px;
+            width: 1000px;
+            background-color: rgb(48, 34, 255);
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+        <div class="first"><span>Шапка</span></div>
+        <div class="second"><span>Блок навигации</span></div>
+        <div class="third"><span>Меню</span></div>
+        <div class="fourth"><span>Контент</span></div>
+        <div class="fifth"><span>Подвал сайта</span></div>
+    </div>
+
+</body>
+
+</html>
