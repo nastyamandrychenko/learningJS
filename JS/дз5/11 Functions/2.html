@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let value1;
+        let value2;
+        let value3;
+        function promptValues() {
+             value1 = +prompt("Введите  число \"а\"");
+            if (isNaN(value1)) {
+                return
+            }
+             value2 = +prompt("Введите  число \"b\"");
+            if (isNaN(value2)) {
+                return
+            }
+             value3 = +prompt("Введите  число \"c\"");
+            if (isNaN(value3)) {
+                return
+            }
+        }
+        function avg(a, b, c) {
+            if (a === undefined || b === undefined || c === undefined) {
+                return
+            }
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+                return
+            }
+            let avg = (a + b + c) / 3;
+            return avg;
+
+        }
+        promptValues();
+
+        let result = avg(value1, value2, value3);
+        if (result) {
+            alert(`Среднее арифметическое значение чисел ${value1}, ${value2} и ${value3} = ${result}`)
+        }
+    </script>
+</body>
+
+</html>
