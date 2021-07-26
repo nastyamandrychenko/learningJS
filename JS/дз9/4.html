@@ -10,10 +10,12 @@
         .margin {
             margin-top: 10px;
         }
-        p{
+
+        p {
             width: 100px;
         }
-        #test_div{
+
+        #test_div {
             width: 40px;
             height: 20px;
         }
@@ -31,33 +33,50 @@
     <div class="margin"><a href="#">Link</a></div>
     <div class="margin" id="test_div">Div</div>
 
-    <div class="margin" onclick="selectPar()"><button>Выбрать все параграфы</button></div>
-    <div class="margin" onclick="selectLink()"><button>Выбрать все ссылки</button></div>
-    <div class="margin" onclick="selectDiv()"><button>Выбрать DIV</button></div>
+    <div class="margin"><button  onclick="selectPar()">Выбрать все параграфы</button></div>
+    <div class="margin" ><button onclick="selectLink()">Выбрать все ссылки</button></div>
+    <div class="margin" ><button onclick="selectDiv()">Выбрать DIV</button></div>
 
     <script>
-        function selectPar(){
+        function selectPar() {
             let paragraphs = document.getElementsByTagName("p");
-            
+
             for (let i = 0; i < paragraphs.length; i++) {
-               
-                paragraphs[i].style.border = "red 2px solid";
+                if (paragraphs[i].style.border === "2px solid red") {
+                    paragraphs[i].style.border = "none";
+                    continue;
+                }
+
+                paragraphs[i].style.border = "2px solid red";
+
             }
 
+
         }
-        function selectLink(){
+        function selectLink() {
             let link = document.getElementsByTagName("a");
-            
+
             for (let i = 0; i < link.length; i++) {
-               
-                link[i].style.border = "green 2px solid";
+
+                if (link[i].style.border === "2px solid green") {
+                    link[i].style.border = "none";
+                    continue;
+                }
+
+                link[i].style.border = "2px solid green";
             }
 
         }
-        function selectDiv(){
+        function selectDiv() {
             let div = document.getElementById("test_div");
-                div.style.border = "orange 2px solid";
-            
+            if (div.style.border === "2px solid orange") {
+                div.style.border = "none";
+                
+            }else{
+                 div.style.border = "2px solid orange";
+            }
+           
+
 
         }
     </script>
