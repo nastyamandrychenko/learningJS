@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .margin{
-            margin-top: 10px ;
+        .margin {
+            margin-top: 10px;
+        }
+        p{
+            width: 100px;
+        }
+        #test_div{
+            width: 40px;
+            height: 20px;
         }
     </style>
 </head>
+
 <body>
     <p>Paragraph</p>
     <p>Paragraph</p>
@@ -22,12 +31,36 @@
     <div class="margin"><a href="#">Link</a></div>
     <div class="margin" id="test_div">Div</div>
 
-    <div class="margin"><button>Выбрать все параграфы</button></div>
-    <div class="margin"><button>Выбрать все ссылки</button></div>
-    <div class="margin"><button>Выбрать DIV</button></div>
+    <div class="margin" onclick="selectPar()"><button>Выбрать все параграфы</button></div>
+    <div class="margin" onclick="selectLink()"><button>Выбрать все ссылки</button></div>
+    <div class="margin" onclick="selectDiv()"><button>Выбрать DIV</button></div>
 
     <script>
+        function selectPar(){
+            let paragraphs = document.getElementsByTagName("p");
+            
+            for (let i = 0; i < paragraphs.length; i++) {
+               
+                paragraphs[i].style.border = "red 2px solid";
+            }
 
+        }
+        function selectLink(){
+            let link = document.getElementsByTagName("a");
+            
+            for (let i = 0; i < link.length; i++) {
+               
+                link[i].style.border = "green 2px solid";
+            }
+
+        }
+        function selectDiv(){
+            let div = document.getElementById("test_div");
+                div.style.border = "orange 2px solid";
+            
+
+        }
     </script>
 </body>
+
 </html>
