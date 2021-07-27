@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position:absolute;
+               
+        }
+
+        #div2 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(128, 0, 0);
+            position:absolute;
+        }
+
+        #div3 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 9, 128);
+            position:absolute;
+        }
+    </style>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+    <script>
+
+
+        function div() {
+            x = 0;
+            x = document.getElementById("div1").offsetTop;
+            let xn = Math.random() * 100;
+            let xl = Math.random() * 100;
+            document.getElementById("div1").style.top = xn + "%"
+            document.getElementById("div1").style.left = xl + "%"
+        }
+        function div2() {
+            x = 0;
+            x = document.getElementById("div2").offsetTop;
+            xn = Math.random() * 100;
+             xl = Math.random() * 100;
+            document.getElementById("div2").style.top = xn + "%"
+            document.getElementById("div2").style.left = xl + "%"
+        }
+        function div3() {
+            x = 0;
+            x = document.getElementById("div3").offsetTop;
+            xn = Math.random() * 100;
+             xl = Math.random() * 100;
+            document.getElementById("div3").style.top = xn + "%"
+            document.getElementById("div3").style.left = xl + "%"
+        }
+        setInterval(() => {
+            div();
+            div2();
+            div3()
+
+        }, 1000)
+        
+        
+    </script>
+</body>
+
+</html>
