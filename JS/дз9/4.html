@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .margin {
+            margin-top: 10px;
+        }
+
+        p {
+            width: 100px;
+        }
+
+        #test_div {
+            width: 40px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Paragraph</p>
+    <p>Paragraph</p>
+    <p>Paragraph</p>
+    <p>Paragraph</p>
+    <div class="margin"><a href="#">Link</a></div>
+    <div class="margin"><a href="#">Link</a></div>
+    <div class="margin"><a href="#">Link</a></div>
+    <div class="margin"><a href="#">Link</a></div>
+    <div class="margin" id="test_div">Div</div>
+
+    <div class="margin"><button  onclick="selectPar()">Выбрать все параграфы</button></div>
+    <div class="margin" ><button onclick="selectLink()">Выбрать все ссылки</button></div>
+    <div class="margin" ><button onclick="selectDiv()">Выбрать DIV</button></div>
+
+    <script>
+        function selectPar() {
+            let paragraphs = document.getElementsByTagName("p");
+
+            for (let i = 0; i < paragraphs.length; i++) {
+                if (paragraphs[i].style.border === "2px solid red") {
+                    paragraphs[i].style.border = "none";
+                    continue;
+                }
+
+                paragraphs[i].style.border = "2px solid red";
+
+            }
+
+
+        }
+        function selectLink() {
+            let link = document.getElementsByTagName("a");
+
+            for (let i = 0; i < link.length; i++) {
+
+                if (link[i].style.border === "2px solid green") {
+                    link[i].style.border = "none";
+                    continue;
+                }
+
+                link[i].style.border = "2px solid green";
+            }
+
+        }
+        function selectDiv() {
+            let div = document.getElementById("test_div");
+            if (div.style.border === "2px solid orange") {
+                div.style.border = "none";
+                
+            }else{
+                 div.style.border = "2px solid orange";
+            }
+           
+
+
+        }
+    </script>
+</body>
+
+</html>

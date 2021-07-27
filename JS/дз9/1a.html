@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Text</p>
+    <p>Text1</p>
+    <p>Text2</p>
+    <p>Text3</p>
+    <p>Text4</p>
+    <script>
+        let module = {};
+        module.change = function(){
+            let p = document.getElementsByTagName("p");
+            
+            Array.from(p).forEach(element => {
+                element.innerHTML = "PARAGRAPH";
+            });
+
+            // for(let x = 0; x < p.length; x++){
+            //     p[x].innerHTML = "PARAGRAPH";    
+            // }
+        }
+        module.change();
+        
+
+
+    </script>
+</body>
+
+</html>
