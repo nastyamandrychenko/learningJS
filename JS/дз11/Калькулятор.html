@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="cont">
+        <input type="text" placeholder="Введите первое число" id="first">
+        <div id="buttons">
+            <input type="button" value="+" onclick="result1()">
+            <input type="button" value="-" onclick="result2()">
+            <input type="button" value="*" onclick="result3()">
+            <input type="button" value="/" onclick="result4()">
+        </div>
+        <input type="text" placeholder="Введите второе число" id="second">
+        <!-- <input type="button" value="=" onclick="result()"> -->
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+
+
+
+        function result1() {
+            let number1 = Number(document.getElementById("first").value);
+            let number2 = Number(document.getElementById("second").value);
+            let result = number1 + number2;
+
+            if (!number1 || !number1 ) {
+                result = "Вы ввели неправильное значение!"
+            }
+            document.getElementById("result").innerHTML = result
+
+        }
+
+        function result2() {
+            let number1 = Number(document.getElementById("first").value);
+            let number2 = Number(document.getElementById("second").value);
+            let result = number1 - number2;
+            document.getElementById("result").innerHTML = result
+
+
+        }
+        function result3() {
+            let number1 = Number(document.getElementById("first").value);
+            let number2 = Number(document.getElementById("second").value);
+            let result = number1 * number2;
+            document.getElementById("result").innerHTML = result
+
+
+        }
+        function result4() {
+            let number1 = Number(document.getElementById("first").value);
+            let number2 = Number(document.getElementById("second").value);
+            let result = number1 / number2;
+            document.getElementById("result").innerHTML = result
+
+
+        }
+     
+    </script>
+</body>
+
+</html>
