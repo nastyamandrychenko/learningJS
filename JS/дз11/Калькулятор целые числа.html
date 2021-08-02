@@ -186,11 +186,19 @@
                     if (!number1 || !number2) {
                         resultNumber = "Ошибка"
                     }
+                      if (number1 % 2 || number2 % 2) {
+                        true
+                    } else {
+                        resultNumber = "Вы можете вводить только целые числа"
+                    }
+
                     document.getElementById("result").innerHTML = resultNumber;
+
+                  
                 },
                 false);
 
-                plus.addEventListener("click",
+            plus.addEventListener("click",
                 function () {
                     i = "+"
                 },
