@@ -157,6 +157,9 @@
             const input2 = document.getElementById("second");
             let btn = document.getElementsByClassName("equals")[0];
             let plus = document.getElementsByClassName("plus")[0];
+            let minus = document.getElementsByClassName("minus")[0];
+            let multiply = document.getElementsByClassName("multiply")[0];
+            let divide = document.getElementsByClassName("divide")[0];
             console.log(btn)
             let clear = document.getElementsByClassName("clear")[0];
             var resultNumber;
@@ -195,6 +198,23 @@
                     i = "+"
                 },
                 false);
+
+                minus.addEventListener("click",
+                function () {
+                    i = "-"
+                },
+                false);
+                multiply.addEventListener("click",
+                function () {
+                    i = "*"
+                },
+                false);
+                divide.addEventListener("click",
+                function () {
+                    i = "/"
+                },
+                false);
+
 
             clear.addEventListener("click", function () {
                 input1.value = "";

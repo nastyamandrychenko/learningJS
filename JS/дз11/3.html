@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="3.js"></script>
 
     <style>
         body {
@@ -150,84 +151,6 @@
         <button class="clear">&#8634;</button>
     </div>
 
-    <script>
-        window.onload = function () {
-
-            const input1 = document.getElementById("first");
-            const input2 = document.getElementById("second");
-            let btn = document.getElementsByClassName("equals")[0];
-            let plus = document.getElementsByClassName("plus")[0];
-            console.log(btn)
-            let clear = document.getElementsByClassName("clear")[0];
-            var resultNumber;
-            let i;
-
-            btn.addEventListener("click",
-                function () {
-                    let number1 = Number(input1.value);
-                    let number2 = Number(input2.value);
-                    switch (i) {
-                        case '+':
-                            resultNumber = number1 + number2;
-                            break;
-                        case '-':
-                            resultNumber = number1 - number2;
-                            break;
-                        case '*':
-                            resultNumber = number1 * number2;
-                            break;
-                        case '/':
-                            resultNumber = number1 / number2;
-                            break;
-                        default:
-                            resultNumber = 'Выберите операцию!';
-
-                    }
-                    if (!number1 || !number2) {
-                        resultNumber = "Ошибка"
-                    }
-                      if (number1 % 2 || number2 % 2) {
-                        true
-                    } else {
-                        resultNumber = "Вы можете вводить только целые числа"
-                    }
-
-                    document.getElementById("result").innerHTML = resultNumber;
-
-                  
-                },
-                false);
-
-                plus.addEventListener("click",
-                function () {
-                    i = "+"
-                },
-                false);
-
-                minus.addEventListener("click",
-                function () {
-                    i = "-"
-                },
-                false);
-                multiply.addEventListener("click",
-                function () {
-                    i = "*"
-                },
-                false);
-                divide.addEventListener("click",
-                function () {
-                    i = "/"
-                },
-                false);
-
-
-            clear.addEventListener("click", function () {
-                input1.value = "";
-                input2.value = "";
-                document.getElementById("result").innerHTML = "";
-            }, false)
-        }
-    </script>
 
 
 </body>
