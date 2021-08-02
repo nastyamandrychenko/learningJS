@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Простая анимация</title>
+
+    <script>
+        let div1;
+        let leftPos = 0;
+
+        window.onload = function () {
+            div1 = document.getElementById("div1");
+            setInterval(animate, 10);
+            console.log(div1)
+        }
+        const screenWidth = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+        let isChangePosition = false;
+        function animate() {
+            div1.style.left = leftPos + "px";
+            if (isChangePosition) {
+                leftPos -= 1;
+            } else {
+                leftPos += 1;
+            }
+            if (leftPos === screenWidth - 50) {
+                isChangePosition = true;
+            } else if (!leftPos) {
+                isChangePosition = false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1" style="height: 30px; width: 30px; background-color: Green; position: relative;">
+    </div>
+</body>
+
+</html>
