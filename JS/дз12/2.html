@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 200px;
+            margin: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 style="color: red;">Нажмите на клавишу r, чтобы текст стал красным</h4>
+    <h4 style="color: rgb(22, 133, 0);">Нажмите на клавишу g, чтобы текст стал зеленым</h4>
+    <h4 style="color: rgb(0, 31, 204);">Нажмите на клавишу b, чтобы текст стал синим</h4>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque qui molestias esse! Suscipit deleniti vitae
+        officiis id delectus quidem eveniet iure consectetur recusandae consequuntur, deserunt reprehenderit cum,
+        distinctio, voluptatum reiciendis.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque qui molestias esse! Suscipit deleniti vitae
+        officiis id delectus quidem eveniet iure consectetur recusandae consequuntur, deserunt reprehenderit cum,
+        distinctio, voluptatum reiciendis.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque qui molestias esse! Suscipit deleniti vitae
+        officiis id delectus quidem eveniet iure consectetur recusandae consequuntur, deserunt reprehenderit cum,
+        distinctio, voluptatum reiciendis.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque qui molestias esse! Suscipit deleniti vitae
+        officiis id delectus quidem eveniet iure consectetur recusandae consequuntur, deserunt reprehenderit cum,
+        distinctio, voluptatum reiciendis.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque qui molestias esse! Suscipit deleniti vitae
+        officiis id delectus quidem eveniet iure consectetur recusandae consequuntur, deserunt reprehenderit cum,
+        distinctio, voluptatum reiciendis.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque qui molestias esse! Suscipit deleniti vitae
+        officiis id delectus quidem eveniet iure consectetur recusandae consequuntur, deserunt reprehenderit cum,
+        distinctio, voluptatum reiciendis.</div>
+    <script>
+
+        window.addEventListener("keydown", function (e) {
+            console.log("e", e.code, e.keyCode)
+            let colors = document.getElementsByTagName("div");
+            Array.from(colors).forEach(el => {
+                if (e.keyCode === 82) {
+                    el.style.color = 'red';
+                }
+                else if (e.keyCode === 71) {
+                    el.style.color = 'green';
+                }
+                else if (e.keyCode === 66) {
+                    el.style.color = 'blue';
+                }
+            })
+
+
+        }, false)
+    </script>
+</body>
+
+</html>
