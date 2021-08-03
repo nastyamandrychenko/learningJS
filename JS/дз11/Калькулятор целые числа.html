@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: rgb(71, 131, 180);
+            background-image: url(img/vn-mxdn4xozdljwn1iqr9gicgpu.png);
+            background-repeat: no-repeat;
+            background-size: 1000px;
+            background-position-x: 500px;
+        }
+
+        #first {
+            width: 397px;
+            height: 47px;
+            border-radius: 7px;
+            position: relative;
+            top: 163px;
+            left: 790px;
+            font-size: 20px;
+        }
+
+        #second {
+            width: 397px;
+            height: 47px;
+            border-radius: 7px;
+            position: relative;
+            top: 133px;
+            left: 790px;
+            font-size: 20px;
+        }
+
+        p {
+            width: 152px;
+            height: 41px;
+            background-color: rgb(196, 196, 196);
+            text-align: center;
+            padding-top: 20px;
+            position: relative;
+            top: 327px;
+            left: 918px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .plus {
+            width: 55px;
+            height: 55px;
+            font-size: 20px;
+            background-image: url(img/white-square-button-emoji.png);
+            background-size: 80px;
+            background-position-x: -14px;
+            background-position-y: -14px;
+            border-radius: 10px;
+            position: relative;
+            left: 821px;
+            top: 264px;
+            color: white;
+        }
+
+        .minus {
+            width: 55px;
+            height: 55px;
+            font-size: 20px;
+            background-image: url(img/white-square-button-emoji.png);
+            background-size: 80px;
+            background-position-x: -14px;
+            background-position-y: -14px;
+            border-radius: 10px;
+            position: relative;
+            left: 851px;
+            top: 264px;
+            color: white;
+        }
+
+        .multiply {
+            width: 55px;
+            height: 55px;
+            font-size: 20px;
+            background-image: url(img/white-square-button-emoji.png);
+            background-size: 80px;
+            background-position-x: -14px;
+            background-position-y: -14px;
+            border-radius: 10px;
+            position: relative;
+            left: 881px;
+            top: 264px;
+            color: white;
+        }
+
+        .divide {
+            width: 55px;
+            height: 55px;
+            font-size: 20px;
+            background-image: url(img/white-square-button-emoji.png);
+            background-size: 80px;
+            background-position-x: -14px;
+            background-position-y: -14px;
+            border-radius: 10px;
+            position: relative;
+            left: 911px;
+            top: 264px;
+            color: white;
+        }
+
+        .equals {
+            width: 234px;
+            height: 48px;
+            font-size: 20px;
+            position: relative;
+            top: 293px;
+            left: 414px;
+            border-radius: 10px;
+            color: white;
+            background-color: rgb(87, 87, 87);
+        }
+
+        .clear {
+            width: 51px;
+            height: 51px;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: rgb(68, 68, 68);
+            position: relative;
+            left: 1092px;
+            top: 140px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cont">
+        <input type="text" placeholder="Введите первое число" id="first">
+        <div id="buttons">
+            <input type="button" value="+" onclick="i='+'" class="plus">
+            <input type="button" value="-" onclick="i='-'" class="minus">
+            <input type="button" value="*" onclick="i='*'" class="multiply">
+            <input type="button" value="/" onclick="i='/'" class="divide">
+        </div>
+        <input type="text" placeholder="Введите второе число" id="second">
+        <button class="equals">=</button>
+        <p id="result"></p>
+        <button class="clear">&#8634;</button>
+    </div>
+
+    <script>
+        window.onload = function () {
+
+            const input1 = document.getElementById("first");
+            const input2 = document.getElementById("second");
+            let btn = document.getElementsByClassName("equals")[0];
+            let plus = document.getElementsByClassName("plus")[0];
+            console.log(btn)
+            let clear = document.getElementsByClassName("clear")[0];
+            var resultNumber;
+            let i;
+
+            btn.addEventListener("click",
+                function () {
+                    let number1 = Number(input1.value);
+                    let number2 = Number(input2.value);
+                    switch (i) {
+                        case '+':
+                            resultNumber = number1 + number2;
+                            break;
+                        case '-':
+                            resultNumber = number1 - number2;
+                            break;
+                        case '*':
+                            resultNumber = number1 * number2;
+                            break;
+                        case '/':
+                            resultNumber = number1 / number2;
+                            break;
+                        default:
+                            resultNumber = 'Выберите операцию!';
+
+                    }
+                    if (!number1 || !number2) {
+                        resultNumber = "Ошибка"
+                    }
+                      if (number1 % 2 || number2 % 2) {
+                        true
+                    } else {
+                        resultNumber = "Вы можете вводить только целые числа"
+                    }
+
+                    document.getElementById("result").innerHTML = resultNumber;
+
+                  
+                },
+                false);
+
+                plus.addEventListener("click",
+                function () {
+                    i = "+"
+                },
+                false);
+
+                minus.addEventListener("click",
+                function () {
+                    i = "-"
+                },
+                false);
+                multiply.addEventListener("click",
+                function () {
+                    i = "*"
+                },
+                false);
+                divide.addEventListener("click",
+                function () {
+                    i = "/"
+                },
+                false);
+
+
+            clear.addEventListener("click", function () {
+                input1.value = "";
+                input2.value = "";
+                document.getElementById("result").innerHTML = "";
+            }, false)
+        }
+    </script>
+
+
+</body>
+
+</html>

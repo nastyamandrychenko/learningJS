@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position:absolute;
+                top:50px;
+                left:50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div"></div>
+    <input type="button" value="Вниз" onclick="down()">
+    <input type="button" value="Вверх" onclick="up()">
+    <input type="button" value="Влево" onclick="left()">
+    <input type="button" value="Вправо" onclick="right()">
+
+    <script>
+        function down() {
+            x = 0;
+            x = document.getElementById("div").offsetTop;
+            xn = x + 100;
+            document.getElementById("div").style.top = xn + "px"
+        }
+        function up() {
+            x = 0;
+            x = document.getElementById("div").offsetTop;
+            xn = x - 100;
+            document.getElementById("div").style.top = xn + "px"
+        }
+        function left() {
+            x = 0;
+            x = document.getElementById("div").offsetLeft;
+            xn = x - 100;
+            document.getElementById("div").style.left = xn + "px"
+        }
+        function right() {
+            x = 0;
+            x = document.getElementById("div").offsetLeft;
+            xn = x + 100;
+            document.getElementById("div").style.left = xn + "px"
+        }
+    </script>
+</body>
+
+</html>

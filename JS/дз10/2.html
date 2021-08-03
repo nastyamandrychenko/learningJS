@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+
+    <div class="conteiner">
+        <img src="img/17797.png" alt="avatar" class="avatar">
+        <label class="remember" for="uname"><b>Login</b></label>
+        <input type="text" placeholder="Enter Login" name="uname" required class="input" oninput="changeInput(this)">
+
+        <label class="remember" for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required class="input"
+            oninput="changeInput(this)">
+
+        <label class="remember">
+
+            <input type="checkbox" checked="checked"> Remember me
+        </label>
+        <button class="login" onclick="login()">Login</button>
+    </div>
+
+    <script>
+        const loginData = {
+            uname: "",
+            psw: ""
+        }
+
+        let inputs = document.getElementsByClassName("input");
+        var p = document.createElement("p");
+        document.body.appendChild(p);
+
+
+        function changeInput(input) {
+            Array.from(inputs).forEach(element => {
+                element.classList.remove("input-error");
+            });
+            p.innerHTML = ""
+            p.classList.remove("mistake");
+            loginData[input.name] = input.value;
+
+        }
+
+
+        function login() {
+
+            console.log("login", inputs)
+
+
+            if (loginData.uname === "" || loginData.psw === "") {
+                Array.from(inputs).forEach(element => {
+                    element.classList.add("input-error");
+                });
+
+             
+                p.innerHTML = "Mistake!<br> You entered incorrect data!"
+                p.classList.add("mistake");
+
+            }
+
+
+            if (loginData.uname === "admin" && loginData.psw === "12345") {
+                Array.from(inputs).forEach(element => {
+                    element.classList.add("input-true");
+                });
+
+                p.innerHTML = "You are logged in!"
+                p.classList.add("true");
+            } else {
+                Array.from(inputs).forEach(element => {
+                    element.classList.add("input-error");
+                });
+                p.innerHTML = "Mistake!<br> You entered incorrect data!"
+                p.classList.add("mistake");
+            }
+
+
+            console.dir(inputs)
+        }
+    </script>
+
+</body>
+
+</html>
