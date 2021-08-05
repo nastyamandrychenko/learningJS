@@ -7,6 +7,7 @@ window.onload = function () {
         result = 0 + 5;
         document.getElementById("res").innerHTML = result;
     }, false)
+    
 }
 
 
