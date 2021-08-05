@@ -10,6 +10,6 @@
 // }
 let result;
 function mushrooms(){
-    result = 0 + 5
+    result +=  5
     document.getElementById("result").innerHTML = result;
 }
