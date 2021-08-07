@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .errorInput {
+            background-color: red;
+        }
+
+        .visibility {
+            visibility: hidden;
+        }
+
+        .visibility-none {
+            visibility: visible;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <input type="text" placeholder="First Name" data-regexp="^[a-z]+$" data-error="Формат не допускает цифр!"
+            name="firstName">
+        <p class="visibility">ee</p>
+
+        <input type="text" placeholder="Second Name" data-regexp="^[a-z]+$" data-error="Формат не допускает цифр!"
+            name="secondName">
+        <p class="visibility">ss</p>
+
+        <input type="text" placeholder="Login" name="login" data-regexp="">
+        <p class="visibility">ss</p>
+
+
+
+        <input type="text" required placeholder="Email" name="email"
+            data-regexp='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+            data-error="Вы ввели не правильное значение!">
+        <p class="visibility">ppp</p>
+
+        <input type="password" name="password" placeholder="Enter password" id="password">
+
+        <input type="password" name="repeatPassword" placeholder="Repeat password" id="repeatPassword"
+            data-error="Пароль не подтвержден!">
+        <p class="visibility"></p>
+
+        <select>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        <p class="visibility">dd</p>
+        <button>Register</button>
+    </form>
+
+    <script>
+        let invalidFields = [];
+        const formEmail = document.getElementsByTagName("form")[0];
+        const setInitialInvalidFields = () => {
+            const inputs = formEmail.getElementsByTagName("input");
+            Array.from(inputs).forEach(el => {
+                invalidFields.push(el.name)
+            })
+        }
+        setInitialInvalidFields();
+        formEmail.addEventListener("change", valInput, false)
+
+        function handleValidation(par, e) {
+            par.innerHTML = e.target.dataset.error;
+            par.classList.add("visibility-none");
+            e.target.onfocus = function () {
+                e.target.classList.remove("errorInput");
+                par.classList.remove("visibility-none");
+            }
+        }
+
+        function valInput(e) {
+            const regexpData = new RegExp(e.target.dataset.regexp);
+            if (!e.target.dataset.regexp) {
+                //check confirm password
+                const passwordInput = document.getElementById("password");
+                const passwordRepeat = document.getElementById("repeatPassword");
+                passwordRepeat.onblur = function (e) {
+                    const par = e.target.nextElementSibling;
+                    if (passwordInput.value === passwordRepeat.value) {
+                        invalidFields = invalidFields.filter(item => item !== e.target.name || item !== "password")
+                    } else {
+                        passwordRepeat.classList.add("errorInput");
+                        handleValidation(par, e)
+
+                    }
+                }
+            } else {
+                //add validation to input data
+                const par = e.target.nextElementSibling;
+                const valueEmail = e.target.value;
+                const errorEmail = !regexpData.test(valueEmail);
+                if (errorEmail) {
+                    e.target.classList.add("errorInput");
+                    handleValidation(par, e)
+
+                } else {
+                    invalidFields = invalidFields.filter(item => item !== e.target.name)
+                    console.log(invalidFields)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
