@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-align: center; font-size: 50px;">Are you stupid?</h1>
+    <button style="width: 90px; height: 40px; font-size: 20px; position: relative; left: 850px;" id="yes">Yes</button>
+    <button style="width: 90px; height: 40px; font-size: 20px; position: relative; left: 910px;" id="no">No</button>
+    <h1 style="text-align: center; margin-top: 100px; font-size: 50px;" id="result"></h1>
+
+    <script>
+        let button = document.getElementById("no");
+        button.addEventListener("mousemove", function (e) {
+            let x = e.clientX, y = e.clientY;
+            button.style.position = 'absolute';
+            button.style.left = x + 15 + 'px';
+            button.style.top = y + 15 + 'px';
+            button.style.right = x + 20 + 'px';
+            button.style.bottom = y + 20 + 'px';
+        }, false)
+
+        let results;
+        let buttonYes = document.getElementById("yes");
+        buttonYes.addEventListener("click", function () {
+
+            results = "I knew it)"
+            document.getElementById("result").innerHTML = results;
+        }, false)
+    </script>
+</body>
+
+</html>
