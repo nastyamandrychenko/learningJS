@@ -114,6 +114,7 @@
                 }
             }
             const button = formEmail.getElementsByTagName("button")[0];
+            //disable submit button if form has validation errors
             if (invalidFields.length === 0) {
                 button.removeAttribute("disabled")
             } else {
