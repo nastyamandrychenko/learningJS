@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Human() {
+            this.vacation = false;
+            this.jobName = "worker";
+
+        }
+        Human.prototype.setVacation = function (isVac) {
+            this.vacation = isVac
+        },
+            Human.prototype.setJobName = function (jobName) {
+                this.jobName = jobName
+
+            }
+        console.log(Human)
+
+        // let Human = {
+        //     vacation: false,
+        //     jobname: "worker",
+
+        //     setVacation: function (isVac) {
+        //         this.vacation = isVac
+        //     },
+
+        //     setJobName: function (jobName) {
+        //         this.jobname = jobName
+
+        //     }
+        // }
+
+        let worker = new Human();
+        let student = new Human();
+        worker.setVacation(true);
+        student.setJobName("student");
+        console.log(worker, student)
+    </script>
+</body>
+
+</html>
