@@ -32,7 +32,7 @@
 
 
     <script>
-        const columns = ["id", "title", "original_language", "vote_average"];
+        const columns = ["Id", "Title", "Original language", "Vote average"];
 
         const button = document.getElementById("get");
 
@@ -48,7 +48,6 @@
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     callback(JSON.parse(xhr.responseText))
-                    console.log("finish")
 
                 }
 
@@ -58,9 +57,8 @@
         window.onload = function () {
             button.onclick = function () {
 
-                const objects = function (properties) {
+                const getObjects = function (properties) {
                     button.disabled = true;
-                    console.log("props", properties)
                     const container = document.getElementById("container");
                     container.classList.add("container")
                     const table = document.createElement("table");
@@ -101,10 +99,6 @@
                         tr.appendChild(td2);
                         tr.appendChild(td3);
                         tr.appendChild(td4);
-
-
-
-
                     });
 
                 }
@@ -113,17 +107,9 @@
                 fetchApi({
                     method: "GET",
                     url: "https://api.themoviedb.org/3/movie/now_playing?api_key=e530dbf87d3f35fe1c14ace5c962084a",
-                    callback: objects
+                    callback: getObjects
                 })
-                // let xhr = new XMLHttpRequest();
-                // xhr.open("GET", "https://api.themoviedb.org/3/movie/now_playing?api_key=e530dbf87d3f35fe1c14ace5c962084a");
 
-                // xhr.onreadystatechange = function(){
-                //     if (xhr.readyState == 4 && xhr.status == 200) {
-                //         objects(JSON.parse(xhr.responseText))
-                //     }
-
-                // }
             }
         }
     </script>
