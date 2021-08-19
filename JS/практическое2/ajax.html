@@ -32,6 +32,9 @@
 
 
     <script>
+        const columns = ["id", "title", "original_language", "vote_average"];
+
+        const button = document.getElementById("get");
 
         function fetchApi({
             method,
@@ -46,15 +49,17 @@
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     callback(JSON.parse(xhr.responseText))
                     console.log("finish")
+
                 }
 
             }
             xhr.send()
         }
         window.onload = function () {
-            document.getElementById("get").onclick = function () {
+            button.onclick = function () {
 
                 const objects = function (properties) {
+                    button.disabled = true;
                     console.log("props", properties)
                     const container = document.getElementById("container");
                     container.classList.add("container")
@@ -64,19 +69,39 @@
                     table.classList.add("table-hover");
 
                     const thead = document.createElement("thead");
-                    const tbody = document.createElement("tbody"); 
+                    const trHead = document.createElement("tr");
+                    thead.appendChild(trHead);
+
+                    columns.forEach(el => {
+                        const thHead = document.createElement("th");
+                        thHead.innerHTML = el;
+                        trHead.appendChild(thHead)
+                    })
+                    const tbody = document.createElement("tbody");
                     container.appendChild(table);
                     table.appendChild(thead);
                     table.appendChild(tbody);
 
                     properties.results.forEach(element => {
                         const tr = document.createElement("tr");
-                        // tr.classList.add("table-active");
-                        const th = document.createElement("td");
-                        // th.classList.add("table-active");
-                        th.innerHTML = element.id;
+                        const td = document.createElement("td");
+                        td.innerHTML = element.id;
+
+                        const td2 = document.createElement("td");
+                        td2.innerHTML = element.title;
+
+                        const td3 = document.createElement("td");
+                        td3.innerHTML = element.original_language;
+
+                        const td4 = document.createElement("td");
+                        td4.innerHTML = element.vote_average;
+
                         tbody.appendChild(tr);
-                        tr.appendChild(th);
+                        tr.appendChild(td);
+                        tr.appendChild(td2);
+                        tr.appendChild(td3);
+                        tr.appendChild(td4);
+
 
 
 
