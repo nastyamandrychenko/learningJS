@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .button {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="button">
+        <button id="get" class="btn btn-outline-dark">Get data</button>
+    </div>
+
+    <div id="container"></div>
+
+
+    <script>
+        const columns = ["Id", "Title", "Original language", "Vote average"];
+
+        const button = document.getElementById("get");
+
+        function fetchApi({
+            method,
+            url,
+            callback,
+            body = null
+        }) {
+            let xhr = new XMLHttpRequest();
+            xhr.open(method, url);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    callback(JSON.parse(xhr.responseText))
+
+                }
+
+            }
+            xhr.send()
+        }
+        window.onload = function () {
+            button.onclick = function () {
+
+                const getObjects = function (properties) {
+                    button.disabled = true;
+                    const container = document.getElementById("container");
+                    container.classList.add("container")
+                    const table = document.createElement("table");
+                    table.classList.add("table");
+                    table.classList.add("table-dark");
+                    table.classList.add("table-hover");
+
+                    const thead = document.createElement("thead");
+                    const trHead = document.createElement("tr");
+                    thead.appendChild(trHead);
+
+                    columns.forEach(el => {
+                        const thHead = document.createElement("th");
+                        thHead.innerHTML = el;
+                        trHead.appendChild(thHead)
+                    })
+                    const tbody = document.createElement("tbody");
+                    container.appendChild(table);
+                    table.appendChild(thead);
+                    table.appendChild(tbody);
+
+                    properties.results.forEach(element => {
+                        const tr = document.createElement("tr");
+                        const td = document.createElement("td");
+                        td.innerHTML = element.id;
+
+                        const td2 = document.createElement("td");
+                        td2.innerHTML = element.title;
+
+                        const td3 = document.createElement("td");
+                        td3.innerHTML = element.original_language;
+
+                        const td4 = document.createElement("td");
+                        td4.innerHTML = element.vote_average;
+
+                        tbody.appendChild(tr);
+                        tr.appendChild(td);
+                        tr.appendChild(td2);
+                        tr.appendChild(td3);
+                        tr.appendChild(td4);
+                    });
+
+                }
+
+
+                fetchApi({
+                    method: "GET",
+                    url: "https://api.themoviedb.org/3/movie/now_playing?api_key=e530dbf87d3f35fe1c14ace5c962084a",
+                    callback: getObjects
+                })
+
+            }
+        }
+    </script>
+</body>
+
+</html>
