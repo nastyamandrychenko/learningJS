@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic design courses</title>
+
+    <style>
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 2fr 5fr 1fr 8fr;
+            grid-template-areas:
+                "logo .  . headernav headernav"
+                ". .  headertext headertext ."
+            ;
+            grid-template-rows: 4fr 10fr;
+            align-items: center;
+            column-gap: 15px;
+        }
+
+
+        .logo{
+            grid-area: logo;
+
+        }
+
+        .headernav {
+            grid-area: headernav;
+            display: grid;
+            grid-template-columns: repeat(7,auto);
+            justify-content: start;
+            column-gap: 20px;
+           
+        }
+
+        .headertext {
+            grid-area: headertext;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu-color"></div>
+        <a href="#" class="logo"><img class="img-logo" src="img/logo.png" alt=""></a>
+        <nav class="headernav">
+            <a href="#" class="nav-link">Курсы</a>
+            <a href="#" class="nav-link">Мероприятия</a>
+            <a href="#" class="nav-link">Блог</a>
+            <a href="#" class="nav-link">О нас</a>
+            <a href="#" class="nav-link">Отзывы</a>
+            <a href="#" class="nav-link">Контакты</a>
+            <a href="#" class="nav-link">Вакансии</a>
+        </nav>
+        <div class="headertext">
+            <h1 class="header-title">Цифровой рисунок <span>Online</span></h1>
+            <p class="header-par">ПРОЙДИ ПУТЬ ОТ ПЕРВОЙ ЛИНИИ ДО ПОЛНОЦЕННОГО АРТА</p>
+        </div>
+
+    </header>
+
+</body>
+
+</html>
