@@ -3,25 +3,53 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graphic design courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+
 
     <style>
-        .header {
+        body {
+            margin: 0;
+        }
+
+        .container {
             display: grid;
-            grid-template-columns: 1fr 2fr 5fr 1fr 8fr;
+        }
+
+        .headert {
+
+            display: grid;
+            grid-template-columns: 5fr 8fr;
             grid-template-areas:
-                "logo .  . headernav headernav"
-                ". .  headertext headertext ."
+                "logo  headernav"
+                " headertext . "
             ;
-            grid-template-rows: 4fr 10fr;
+            grid-template-rows: 2fr 5.5fr;
             align-items: center;
-            column-gap: 15px;
+            column-gap: 50px;
+
+
+            background-image: url(img/back.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+
+
         }
 
 
-        .logo{
+        .logo {
             grid-area: logo;
 
         }
@@ -29,38 +57,181 @@
         .headernav {
             grid-area: headernav;
             display: grid;
-            grid-template-columns: repeat(7,auto);
-            justify-content: start;
+            grid-template-columns: repeat(7, auto);
+            justify-content: center;
             column-gap: 20px;
-           
+            margin-bottom: 50px;
+            font-family: 'Comfortaa', cursive;
+
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+
         }
 
         .headertext {
             grid-area: headertext;
+            color: white;
+            margin-left: 50px;
+            font-family: 'Old Standard TT', serif;
+
         }
 
+        .headertext p {
+            font-family: 'Alumni Sans', sans-serif;
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .headertext h1 {
+
+            margin: 0;
+        }
+
+
+        .online {
+            font-family: 'Bungee Shade', cursive;
+            font-size: 28px;
+            color: rgb(255, 234, 77);
+        }
+
+
+
+        @media(max-width: 750px) {
+            .headert {
+                background-size: 150%;
+                display: grid;
+                grid-template-columns: 5fr 5fr;
+                grid-template-areas:
+                    "logo  headernav"
+                    " headertext . "
+                ;
+                grid-template-rows: 0.5fr 2fr;
+                align-items: flex-start;
+                background-position-x: -70px;
+
+
+
+            }
+
+            .img-logo {
+                width: 90%;
+
+            }
+
+            .headernav {
+                grid-area: headernav;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(7, auto);
+                justify-content: flex-end;
+                column-gap: 20px;
+                margin-top: 20px;
+                font-size: 20px;
+                margin-left: 150px;
+
+
+            }
+
+            .headertext {
+                grid-area: headertext;
+                color: white;
+                font-size: 15px;
+                margin-left: 50px;
+
+                position: relative;
+                bottom: 108px;
+
+            }
+
+
+        }
+
+        @media(max-width: 620px) {
+            .headert {
+                background-size: 150%;
+                display: grid;
+                grid-template-columns: 5fr 5fr;
+                grid-template-areas:
+                    "logo  headernav"
+                    " headertext . "
+                ;
+                grid-template-rows: 0.5fr 2fr;
+                align-items: flex-start;
+                background-position-x: -20px;
+
+            }
+
+            .img-logo {
+                width: 90%;
+
+            }
+
+            .headernav {
+                grid-area: headernav;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(7, auto);
+                justify-content: flex-end;
+                column-gap: 20px;
+                margin-top: 20px;
+                font-size: 10px;
+                margin-left: 84px;
+                margin-right: 15px;
+                padding: 10px;
+
+
+            }
+
+            .headertext {
+                grid-area: headertext;
+                color: white;
+                font-size: 8px;
+                margin-left: 50px;
+
+                position: relative;
+                bottom: 80px;
+
+            }
+
+
+        }
+
+
+        @media(max-width: 1000px) {
+            .headert {
+                background-size: 150%;
+            }
+
+        }
     </style>
 </head>
 
 <body>
-    <header class="header">
-        <div class="menu-color"></div>
-        <a href="#" class="logo"><img class="img-logo" src="img/logo.png" alt=""></a>
-        <nav class="headernav">
-            <a href="#" class="nav-link">Курсы</a>
-            <a href="#" class="nav-link">Мероприятия</a>
-            <a href="#" class="nav-link">Блог</a>
-            <a href="#" class="nav-link">О нас</a>
-            <a href="#" class="nav-link">Отзывы</a>
-            <a href="#" class="nav-link">Контакты</a>
-            <a href="#" class="nav-link">Вакансии</a>
-        </nav>
-        <div class="headertext">
-            <h1 class="header-title">Цифровой рисунок <span>Online</span></h1>
-            <p class="header-par">ПРОЙДИ ПУТЬ ОТ ПЕРВОЙ ЛИНИИ ДО ПОЛНОЦЕННОГО АРТА</p>
-        </div>
+    <div class="container">
+        <header class="headert">
 
-    </header>
+            <a href="#" class="logo"><img class="img-logo" src="img/logo.png" alt=""></a>
+            <div class="headernav">
+                <a href="#" class="nav-link">Курсы &#9660;</a>
+                <a href="#" class="nav-link">Мероприятия</a>
+                <a href="#" class="nav-link">Блог</a>
+                <a href="#" class="nav-link">О нас</a>
+                <a href="#" class="nav-link">Отзывы</a>
+                <a href="#" class="nav-link">Контакты</a>
+                <a href="#" class="nav-link">Вакансии</a>
+            </div>
+
+            <div class="headertext">
+                <h1 class="header-title">Цифровой рисунок <span class="online">Online</span></h1>
+                <p class="header-par">ПРОЙДИ ПУТЬ ОТ ПЕРВОЙ ЛИНИИ ДО ПОЛНОЦЕННОГО АРТА</p>
+            </div>
+
+        </header>
+    </div>
+
 
 </body>
 
