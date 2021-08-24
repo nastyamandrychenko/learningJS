@@ -17,158 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="first-page.css">
 
     <style>
-        body {
-            margin: 0;
-        }
-
-        .container {
-            display: grid;
-        }
-
-        .headert {
-
-            display: grid;
-            grid-template-columns: 5fr 8fr;
-            grid-template-areas:
-                "logo  headernav "
-                " headertext  svg"
-            ;
-            grid-template-rows: 2fr 8.5fr;
-            align-items: center;
-            column-gap: 50px;
-
-
-            background-image: url(img/back.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            position: relative;
-
-        }
-
-
-        .svg {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            opacity: 70%;
-        }
-
-
-        .logo {
-            grid-area: logo;
-
-        }
-
-        .headernav {
-            grid-area: headernav;
-            display: grid;
-            grid-template-columns: repeat(7, auto);
-            justify-content: center;
-            column-gap: 20px;
-
-            font-family: 'Comfortaa', cursive;
-
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-
-        }
-
-        .headertext {
-            grid-area: headertext;
-            color: white;
-            margin-left: 50px;
-            font-family: 'Old Standard TT', serif;
-
-        }
-
-        .headertext p {
-            font-family: 'Alumni Sans', sans-serif;
-            margin-top: 0;
-            font-size: 20px;
-        }
-
-        .headertext h1 {
-
-            margin: 0;
-        }
-
-        .img-logo {
-            width: 300px;
-
-        }
-
-
-        .online {
-            font-family: 'Bungee Shade', cursive;
-            font-size: 28px;
-            color: rgb(255, 234, 77);
-        }
-
-        @media(max-width: 1125px) {
-            .headernav {
-                font-size: 11px;
-            }
-        }
-
-
-
-        @media(max-width: 850px) {
-            .headert {
-                /* background-size: 150%; */
-                display: grid;
-                grid-template-columns: 5fr 5fr;
-                grid-template-areas:
-                    "logo  headernav"
-                    " headertext . "
-                ;
-                grid-template-rows: 0.5fr 2fr;
-                align-items: flex-start;
-                /* background-position-x: -20px; */
-                background-image: url(img/back2.jpg);
-                background-position: center;
-
-
-            }
-
-            .img-logo {
-                width: 90%;
-
-            }
-
-            .headernav {
-                grid-area: headernav;
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(7, auto);
-                justify-content: flex-end;
-                column-gap: 20px;
-                margin-top: 20px;
-                font-size: 10px;
-                margin-left: 84px;
-                margin-right: 15px;
-                padding: 10px;
-
-
-            }
-
-            .headertext {
-                grid-area: headertext;
-                color: white;
-                font-size: 10px;
-                margin-left: 50px;
-
-                position: relative;
-                /* bottom: 80px; */
-
-            }
-
-
-        }
+   
     </style>
 </head>
 
@@ -235,7 +87,7 @@
                 <circle cx="160" cy="120" r="50" fill="url(#grad1)" />
             </svg>
 
-            <svg height="85" width="135" class="svg" style="position: absolute; top:80px; left:0px; ">
+            <svg height="85" width="135" class="svg" style="position: absolute; top:60px; left:0px; ">
                 <defs>
                     <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
                         <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
@@ -268,6 +120,7 @@
                 <circle cx="100" cy="50" r="20" fill="url(#grad1)" />
             </svg>
 
+          
             <!-- svg -->
 
 
@@ -289,6 +142,10 @@
 
 
         </header>
+
+        <main>
+
+        </main>
     </div>
 
 
