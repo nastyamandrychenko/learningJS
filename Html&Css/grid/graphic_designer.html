@@ -20,12 +20,21 @@
     <link rel="stylesheet" href="first-page.css">
 
     <style>
-   
+        .second-page {
+            grid-area: second-page;
+        }
+
+        .second-page img {
+            width: 500px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+
+        <!-- first page -->
+
         <header class="headert">
 
             <!-- svg -->
@@ -76,7 +85,8 @@
                 <circle cx="100" cy="50" r="10" fill="url(#grad1)" />
             </svg>
 
-            <svg height="220" width="220" class="svg" style="position: absolute; top:120px; left:0px; transform: rotate(180deg); ">
+            <svg height="220" width="220" class="svg"
+                style="position: absolute; top:120px; left:0px; transform: rotate(180deg); ">
                 <defs>
                     <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
                         <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
@@ -120,7 +130,7 @@
                 <circle cx="100" cy="50" r="20" fill="url(#grad1)" />
             </svg>
 
-          
+
             <!-- svg -->
 
 
@@ -143,12 +153,42 @@
 
         </header>
 
-        <main>
+        <!-- first page -->
 
+
+        <!-- second page -->
+
+        <main class="second-page">
+            <h1>Чему учим на занятиях?</h1>
+            <img id="img-secondPage" src="img/чему учим.png" alt="">
+            <button id="second-shadow">Свет и тень</button>
+            <button id="second-color">Все о цвете</button>
+            <button id="second-composition">Основы композиции</button>
         </main>
+
+        <!-- second page -->
     </div>
 
+    
+    <script>
+        window.onload = function () {
+            const shadow = document.getElementById('second-shadow');
+            const color = document.getElementById('second-color');
+            const composition = document.getElementById('second-composition');
 
+
+            function onclickImg(name, img) {
+                name.onclick = function () {
+                    const imageArea = document.getElementById('img-secondPage');
+                    imageArea.src = img
+                    console.log("dd")
+                }
+            }
+            onclickImg(shadow, "img/тени и свет.png");
+            onclickImg(color, "img/цвет.png");
+            onclickImg(composition, "img/композиция.png")
+        }
+    </script>
 </body>
 
 </html>

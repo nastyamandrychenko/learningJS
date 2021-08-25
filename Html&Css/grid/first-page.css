@@ -4,10 +4,14 @@ body {
 
 .container {
     display: grid;
+grid-template-columns: 1fr;
+grid-template-areas: "first-page"
+"second-page";
 }
 
 .headert {
 
+    grid-area: first-page;
     display: grid;
     grid-template-columns: 5fr 8fr;
     grid-template-areas:
@@ -38,11 +42,11 @@ body {
 /* transition */
 
 circle{
-    transition: 2s linear;
+    transition: 1s linear;
 }
 
 circle:hover{
-    transform: scale(-1);
+    transform: scale(0.7);
 }
 /* transition */
 
