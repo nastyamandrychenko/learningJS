@@ -18,16 +18,133 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="first-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@100&display=swap" rel="stylesheet">
 
     <style>
         .second-page {
+            background-color: rgba(189, 133, 178, 0.452);
             grid-area: second-page;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 4fr;
+            grid-template-rows: 1fr 0.3fr 0.5fr;
+            grid-template-areas: ". second-page-h1 second-page-h1 second-page-h1 img-secondPage"
+                ". second-paragraph second-paragraph second-paragraph img-secondPage"
+                ". second-shadow second-composition second-color img-secondPage";
+            align-items: center;
+            justify-items: center;
+            border: 7px solid;
+            border-image: linear-gradient(to right, rgba(109, 167, 255, 0.685), rgba(250, 114, 255, 0.651)) 1%;
+
+
         }
 
-        .second-page img {
-            width: 500px;
+
+
+        .second-paragraph {
+            grid-area: second-paragraph;
+            width: 400px;
+            font-family: 'Cormorant SC', serif;
         }
+
+        .second-page-h1 {
+            grid-area: second-page-h1;
+            font-family: 'Ruslan Display', cursive;
+            margin-left: 25px;
+        }
+
+        #img-secondPage {
+            width: 500px;
+            grid-area: img-secondPage;
+
+        }
+
+        #second-shadow {
+            grid-area: second-shadow;
+            border: 3px solid;
+            border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
+            background-color: rgba(255, 255, 255, 0);
+            cursor: pointer;
+            font-family: 'Old Standard TT', serif;
+            width: 100px;
+
+
+        }
+
+        #second-color {
+            grid-area: second-color;
+            border: 3px solid;
+            border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
+            background-color: rgba(255, 255, 255, 0);
+            cursor: pointer;
+            font-family: 'Old Standard TT', serif;
+            width: 100px;
+        }
+
+        #second-composition {
+            grid-area: second-composition;
+            border: 3px solid;
+            border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
+            background-color: rgba(255, 255, 255, 0);
+            cursor: pointer;
+            font-family: 'Old Standard TT', serif;
+            width: 145px;
+        }
+
+
+        .page_map {
+            grid-area: page-map;
+            background-color: rgb(0, 0, 0);
+            display: grid;
+            grid-template-columns: 1fr 12fr 1fr;
+            grid-template-rows: 1fr 6fr 0.5fr;
+            grid-template-areas:". . ."
+             ". map ."
+             ". . .";
+            position: relative;
+            background-image: url(img/затемнение.png);
+        }
+
+        .map {
+            grid-area: map;
+            width: 100%;
+            filter: brightness(0.2);
+            transition: 2s linear;
+        }
+
+        .map:hover {
+            filter: none;
+            color: transparent;
+        }
+
+        .title-map {
+            position: absolute;
+            left: -9%;
+            top: 44%;
+            font-size: 30px;
+            color: white;
+            font-family: 'Tourney', cursive;
+            font-weight: 100;
+            transform: rotate(90deg);
+
+        }
+
+        /* .title-map:hover {
+            opacity: 0;
+            filter: none;
+        } */
     </style>
+
 </head>
 
 <body>
@@ -159,7 +276,17 @@
         <!-- second page -->
 
         <main class="second-page">
-            <h1>Чему учим на занятиях?</h1>
+
+            <!-- <canvas id="canvas" height="300" width="300">
+                Ваш браузер не поддерживает элемент <i>Canvas</i>
+            </canvas> -->
+
+            <h1 class="second-page-h1">Чему учим на занятиях?</h1>
+            <p class="second-paragraph">За время обучения ты освоишь ключевые навыки цифрового артиста — работу с линией
+                и формой, светом и
+                цветом, композицией и перспективой. Также вдоволь попрактикуешься: подготовишь 50+ рисованных объектов и
+                создашь несколько полноценных иллюстраций. А еще получишь базу для дальнейшего развития в игровом арте,
+                комиксах, дизайне персонажей, концепте окружения и других сферах компьютерной графики.</p>
             <img id="img-secondPage" src="img/чему учим.png" alt="">
             <button id="second-shadow">Свет и тень</button>
             <button id="second-color">Все о цвете</button>
@@ -167,15 +294,31 @@
         </main>
 
         <!-- second page -->
+
+        <!-- third page -->
+        <main class="page_map">
+
+
+
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1347.7803489897728!2d19.070394598552994!3d47.498470772213565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc66e2a0e799%3A0x3b24d300deeee120!2z0J3RjNGOLdCZ0L7RgNC6!5e0!3m2!1sru!2sua!4v1629912136944!5m2!1sru!2sua"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <!-- Геолокация -->
+<!-- 
+            <h2 class="title-map">FIND US ON THE MAP</h2> -->
+            
+        </main>
     </div>
 
-    
+
     <script>
         window.onload = function () {
             const shadow = document.getElementById('second-shadow');
             const color = document.getElementById('second-color');
             const composition = document.getElementById('second-composition');
 
+            //  Работа с графикой на стороне клиента
 
             function onclickImg(name, img) {
                 name.onclick = function () {
@@ -187,6 +330,12 @@
             onclickImg(shadow, "img/тени и свет.png");
             onclickImg(color, "img/цвет.png");
             onclickImg(composition, "img/композиция.png")
+
+            //  Работа с графикой на стороне клиента
+
+
+
+
         }
     </script>
 </body>

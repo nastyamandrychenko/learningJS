@@ -6,7 +6,8 @@ body {
     display: grid;
 grid-template-columns: 1fr;
 grid-template-areas: "first-page"
-"second-page";
+"second-page"
+"page-map";
 }
 
 .headert {
