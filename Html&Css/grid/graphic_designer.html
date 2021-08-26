@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graphic design courses</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
@@ -29,8 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@100&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet">
     <style>
         .second-page {
             background-color: rgba(189, 133, 178, 0.452);
@@ -108,11 +108,11 @@
             display: grid;
             grid-template-columns: 1fr 12fr 1fr;
             grid-template-rows: 1fr 6fr 0.5fr;
-            grid-template-areas:". . ."
-             ". map ."
-             ". . .";
+            grid-template-areas: ". . ."
+                ". map ."
+                ". . .";
             position: relative;
-            background-image: url(img/затемнение.png);
+            /* background-image: url(img/затемнение.png); */
         }
 
         .map {
@@ -129,20 +129,31 @@
 
         .title-map {
             position: absolute;
-            left: -9%;
-            top: 44%;
-            font-size: 30px;
+            left: 8%;
+            font-size: 25px;
             color: white;
-            font-family: 'Tourney', cursive;
+            font-family: 'Averia Serif Libre', cursive;
             font-weight: 100;
-            transform: rotate(90deg);
+            background: linear-gradient(45deg, #83aafd 33%, #f480ff 66%, #fa3cbb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: table;
+
 
         }
 
-        /* .title-map:hover {
-            opacity: 0;
-            filter: none;
-        } */
+        .title-map::after {
+            content: "";
+    padding-right: 26px;
+    /* margin-left: 9px; */
+    padding-bottom: 5px;
+    width: 26px;
+    height: 34px;
+    background-image: url(img/ikonka-geolokatsii.png);
+    background-size: 19px;
+    background-repeat: no-repeat;
+    margin: 13px;
+        }
     </style>
 
 </head>
@@ -305,9 +316,52 @@
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
             <!-- Геолокация -->
-<!-- 
-            <h2 class="title-map">FIND US ON THE MAP</h2> -->
-            
+
+            <h2 class="title-map">FIND US ON THE MAP</h2>
+            <svg class="svg" style="width: 170px; height: 120px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+
+                <circle cx="160" cy="120" r="80" style="fill:url(#grad1)" style="position: absolute; bottom:90px;" />
+            </svg>
+            <svg height="85" width="135" class="svg" style="position: absolute; bottom:90px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="50" r="30" fill="url(#grad1)" />
+            </svg>
+
+            <svg height="85" width="135" class="svg" style="position: absolute; top:50px; right:30px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="50" r="20" fill="url(#grad1)" />
+            </svg>
+
+            <svg height="85" width="135" class="svg" style="position: absolute; bottom:40px; right:60px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="50" r="10" fill="url(#grad1)" />
+            </svg>
+
         </main>
     </div>
 
