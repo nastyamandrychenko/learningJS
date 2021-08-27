@@ -7,7 +7,9 @@ body {
 grid-template-columns: 1fr;
 grid-template-areas: "first-page"
 "second-page"
-"page-map";
+"page-map"
+"third_page";
+
 }
 
 .headert {

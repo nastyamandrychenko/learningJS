@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="first-page.css">
+    <link rel="stylesheet" href="second-page.css">
+    <link rel="stylesheet" href="page_map.css">
+
+
     <title>Graphic design courses</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
@@ -18,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="first-page.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap" rel="stylesheet">
@@ -31,128 +37,85 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
     <style>
-        .second-page {
-            background-color: rgba(189, 133, 178, 0.452);
-            grid-area: second-page;
+        .third_page {
+            grid-area: third_page;
+
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 4fr;
-            grid-template-rows: 1fr 0.3fr 0.5fr;
-            grid-template-areas: ". second-page-h1 second-page-h1 second-page-h1 img-secondPage"
-                ". second-paragraph second-paragraph second-paragraph img-secondPage"
-                ". second-shadow second-composition second-color img-secondPage";
-            align-items: center;
-            justify-items: center;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 6fr 1fr;
+            grid-template-areas: "third_pageTitle third_pageTitle . ."
+                ". selfeducation with_mentor ."
+                ". . . .";
+            column-gap: 20px;
+            background-color: rgba(189, 133, 178, 0.452);
             border: 7px solid;
             border-image: linear-gradient(to right, rgba(109, 167, 255, 0.685), rgba(250, 114, 255, 0.651)) 1%;
-
-
+            
         }
 
-
-
-        .second-paragraph {
-            grid-area: second-paragraph;
-            width: 400px;
-            font-family: 'Cormorant SC', serif;
-        }
-
-        .second-page-h1 {
-            grid-area: second-page-h1;
+        .third_pageTitle {
+            grid-area: third_pageTitle;
+            margin-left: 20px;
             font-family: 'Ruslan Display', cursive;
-            margin-left: 25px;
+            
         }
 
-        #img-secondPage {
-            width: 500px;
-            grid-area: img-secondPage;
-
+        .with_mentor {
+            grid-area: with_mentor;
+            background-color: rgb(255, 232, 245);
+            border-radius: 10px;
         }
 
-        #second-shadow {
-            grid-area: second-shadow;
-            border: 3px solid;
-            border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
-            background-color: rgba(255, 255, 255, 0);
-            cursor: pointer;
-            font-family: 'Old Standard TT', serif;
-            width: 100px;
-
-
-        }
-
-        #second-color {
-            grid-area: second-color;
-            border: 3px solid;
-            border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
-            background-color: rgba(255, 255, 255, 0);
-            cursor: pointer;
-            font-family: 'Old Standard TT', serif;
-            width: 100px;
-        }
-
-        #second-composition {
-            grid-area: second-composition;
-            border: 3px solid;
-            border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
-            background-color: rgba(255, 255, 255, 0);
-            cursor: pointer;
-            font-family: 'Old Standard TT', serif;
-            width: 145px;
-        }
-
-
-        .page_map {
-            grid-area: page-map;
-            background-color: rgb(0, 0, 0);
+        .selfeducation {
+            grid-area: selfeducation;
+            background-color: rgb(255, 232, 245);
+            border-radius: 10px;
             display: grid;
-            grid-template-columns: 1fr 12fr 1fr;
-            grid-template-rows: 1fr 6fr 0.5fr;
-            grid-template-areas: ". . ."
-                ". map ."
-                ". . .";
-            position: relative;
-            /* background-image: url(img/затемнение.png); */
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 3fr  1fr 1fr 1fr;
+            grid-template-areas: "self_title"
+            "self_par"
+            "self_list" 
+            
+            "self_start"
+            "self_price"
+            "self_button";
+            background-image: url(img/div1.png);
+            box-shadow: 10px 10px 20px 2px #522643;
         }
 
-        .map {
-            grid-area: map;
-            width: 100%;
-            filter: brightness(0.2);
-            transition: 2s linear;
+        .self_title {
+            grid-area: self_title;
+            font-family: 'Old Standard TT', serif;
         }
 
-        .map:hover {
-            filter: none;
-            color: transparent;
+        .self_par {
+            grid-area: self_par;
+            font-family: 'PT Serif', serif;
+            font-weight:600;
         }
 
-        .title-map {
-            position: absolute;
-            left: 8%;
-            font-size: 25px;
-            color: white;
-            font-family: 'Averia Serif Libre', cursive;
-            font-weight: 100;
-            background: linear-gradient(45deg, #83aafd 33%, #f480ff 66%, #fa3cbb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: table;
-
-
+        .self_list {
+            grid-area: self_list;
+            font-family: 'PT Serif', serif;
         }
 
-        .title-map::after {
-            content: "";
-    padding-right: 26px;
-    /* margin-left: 9px; */
-    padding-bottom: 5px;
-    width: 26px;
-    height: 34px;
-    background-image: url(img/ikonka-geolokatsii.png);
-    background-size: 19px;
-    background-repeat: no-repeat;
-    margin: 13px;
+        .self_start {
+            grid-area: self_start;
+            font-family: 'Old Standard TT', serif;
+        }
+
+        .self_price {
+            grid-area: self_price;
+        }
+
+
+        .self_button {
+            grid-area: self_button;
         }
     </style>
 
@@ -160,6 +123,44 @@
 
 <body>
     <div class="container">
+
+        <!-- third page -->
+        <main class="third_page">
+            <h1 class="third_pageTitle">ВЫБЕРИТЕ ФОРМАТ ОБУЧЕНИЯ:</h1>
+            <div class="selfeducation">
+                <h2 class="self_title">Самостоятельное обучение</h2>
+                <p class="self_par">Смотри лекции в полном объеме и проходи курс в комфортном темпе </p>
+                <ul class="self_list">
+                    <li>24 часа программы</li>
+                    <li>домашние работы без дедлайнов</li>
+                    <li>доступ к архиву фидбек-сессий</li>
+                    <li>чат для общения</li>
+                    <li>пожизненный доступ к материалам</li>
+                </ul>
+                <h2 class="self_start">Старт сразу после оплаты</h2>
+                <h2 class="self_price">4400грн <span> цена</span></h2>
+              
+                <button class="self_button">Записаться</button>
+            </div>
+            <div class="with_mentor">
+                <h2>Обучение с ментором</h2>
+                <p>Получай индивидуальные фидбеки на каждую работу и выполни дипломный проект </p>
+                <ul>
+                    <li>24 часа программы</li>
+                    <li>домашние задания</li>
+                    <li>«живые» вебинары с ментором</li>
+                    <li>индивидуальные фидбеки на каждую работу</li>
+                    <li>дипломный проект</li>
+                    <li>личный кабинет с техподдержкой и чатом</li>
+                    <li>пожизненный доступ к материалам</li>
+                </ul>
+                <h2>25 августа</h2>
+                <h4>старт</h4>
+                <h2>7040грн</h2>
+                <h4>цена</h4>
+                <button>Записаться</button>
+            </div>
+        </main>
 
         <!-- first page -->
 
@@ -306,7 +307,12 @@
 
         <!-- second page -->
 
-        <!-- third page -->
+
+
+
+
+
+        <!-- map page -->
         <main class="page_map">
 
 
@@ -363,6 +369,7 @@
             </svg>
 
         </main>
+        <!-- map page -->
     </div>
 
 
