@@ -38,8 +38,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=PT+Serif&display=swap" rel="stylesheet">
     <style>
         .third_page {
             grid-area: third_page;
@@ -51,23 +54,23 @@
                 ". selfeducation with_mentor ."
                 ". . . .";
             column-gap: 20px;
-            background-color: rgba(189, 133, 178, 0.452);
+            background-color: rgba(184, 227, 255, 0.452);
             border: 7px solid;
             border-image: linear-gradient(to right, rgba(109, 167, 255, 0.685), rgba(250, 114, 255, 0.651)) 1%;
-            
+            position: relative;
+
         }
 
         .third_pageTitle {
             grid-area: third_pageTitle;
             margin-left: 20px;
             font-family: 'Ruslan Display', cursive;
-            
+
         }
 
-        .with_mentor {
-            grid-area: with_mentor;
-            background-color: rgb(255, 232, 245);
-            border-radius: 10px;
+
+        .canvas {
+            position: absolute;
         }
 
         .selfeducation {
@@ -76,46 +79,166 @@
             border-radius: 10px;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 3fr  1fr 1fr 1fr;
+            grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr 0.5fr 0.7fr;
             grid-template-areas: "self_title"
-            "self_par"
-            "self_list" 
-            
-            "self_start"
-            "self_price"
-            "self_button";
+                "self_par"
+                "self_list"
+
+                "self_start"
+                "self_price"
+                "self_button";
             background-image: url(img/div1.png);
             box-shadow: 10px 10px 20px 2px #522643;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            align-items: center;
+            justify-items: center;
         }
 
         .self_title {
             grid-area: self_title;
-            font-family: 'Old Standard TT', serif;
+            font-family: 'Balsamiq Sans', cursive;
+            font-family: 'PT Serif', serif;
+            padding-left: 20px;
         }
 
         .self_par {
             grid-area: self_par;
             font-family: 'PT Serif', serif;
-            font-weight:600;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
         .self_list {
             grid-area: self_list;
-            font-family: 'PT Serif', serif;
+            font-family: 'Balsamiq Sans', cursive;
+            /* padding-left: 38px;
+            padding-right: 20px; */
         }
 
         .self_start {
             grid-area: self_start;
-            font-family: 'Old Standard TT', serif;
+            font-family: 'Balsamiq Sans', cursive;
+
+            font-size: 20px;
+            /* padding-left: 20px;
+            padding-right: 20px; */
+            color: rgb(122, 178, 243);
+            -webkit-text-stroke: 0.5px #002231;
         }
 
         .self_price {
             grid-area: self_price;
+            /* padding-left: 20px; */
+            font-size: 25px;
+            background: linear-gradient(90deg, #0e5153 33%, #4c3ae9 66%, #68d4c2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px #002231;
+
+        }
+
+        .self_price span {
+            font-size: 17px;
+
         }
 
 
         .self_button {
             grid-area: self_button;
+            width: 100px;
+            height: 40px;
+            border: 3px solid;
+            border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
+            background-color: rgb(184, 227, 255);
+            cursor: pointer;
+            font-family: 'Old Standard TT', serif;
+            font-size: 15px;
+            box-shadow: inset 3px 7px 10px 3px #522643;
+
+        }
+
+        .with_mentor {
+            grid-area: with_mentor;
+            background-color: rgb(255, 232, 245);
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px 2px #522643;
+            background-image: url(img/div2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr 0.5fr 0.7fr;
+            grid-template-areas: "mentor_title"
+                "mentor_par"
+                "mentor_list"
+
+                "mentor_start"
+                "mentor_price"
+                "mentor_button";
+            align-items: center;
+            justify-items: center;
+
+        }
+
+        .mentor_title {
+            grid-area: mentor_title;
+            font-family: 'Balsamiq Sans', cursive;
+            font-family: 'PT Serif', serif;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .mentor_par {
+            grid-area: mentor_par;
+            font-family: 'PT Serif', serif;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .mentor_list {
+            grid-area: mentor_list;
+            font-family: 'Balsamiq Sans', cursive;
+        }
+
+        .mentor_start {
+            grid-area: mentor_start;
+            font-family: 'Balsamiq Sans', cursive;
+
+            font-size: 20px;
+            color: rgb(122, 178, 243);
+            -webkit-text-stroke: 0.5px #002231;
+        }
+
+        .mentor_price {
+            grid-area: mentor_price;
+            /* padding-left: 20px; */
+            font-size: 25px;
+            background: linear-gradient(90deg, #0e5153 33%, #4c3ae9 66%, #68d4c2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px #002231;
+
+        }
+
+        .mentor_price span {
+            font-size: 17px;
+
+        }
+
+        .mentor_button {
+            grid-area: mentor_button;
+            width: 100px;
+            height: 40px;
+            border: 3px solid;
+            border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
+            background-color: rgb(184, 227, 255);
+            cursor: pointer;
+            font-family: 'Old Standard TT', serif;
+            font-size: 15px;
+            box-shadow: inset 3px 7px 10px 3px #522643;
         }
     </style>
 
@@ -126,6 +249,8 @@
 
         <!-- third page -->
         <main class="third_page">
+            <canvas id="canvas" width="100" height="100"></canvas>
+
             <h1 class="third_pageTitle">ВЫБЕРИТЕ ФОРМАТ ОБУЧЕНИЯ:</h1>
             <div class="selfeducation">
                 <h2 class="self_title">Самостоятельное обучение</h2>
@@ -139,13 +264,13 @@
                 </ul>
                 <h2 class="self_start">Старт сразу после оплаты</h2>
                 <h2 class="self_price">4400грн <span> цена</span></h2>
-              
+
                 <button class="self_button">Записаться</button>
             </div>
             <div class="with_mentor">
-                <h2>Обучение с ментором</h2>
-                <p>Получай индивидуальные фидбеки на каждую работу и выполни дипломный проект </p>
-                <ul>
+                <h2 class="mentor_title">Обучение с ментором</h2>
+                <p class="mentor_par">Получай индивидуальные фидбеки на каждую работу и выполни дипломный проект </p>
+                <ul class="mentor_list">
                     <li>24 часа программы</li>
                     <li>домашние задания</li>
                     <li>«живые» вебинары с ментором</li>
@@ -154,11 +279,9 @@
                     <li>личный кабинет с техподдержкой и чатом</li>
                     <li>пожизненный доступ к материалам</li>
                 </ul>
-                <h2>25 августа</h2>
-                <h4>старт</h4>
-                <h2>7040грн</h2>
-                <h4>цена</h4>
-                <button>Записаться</button>
+                <h2 class="mentor_start">25 августа старт</h2>
+                <h2 class="mentor_price">7040грн <span>цена</span></h2>
+                <button class="mentor_button">Записаться</button>
             </div>
         </main>
 
@@ -393,6 +516,7 @@
             onclickImg(composition, "img/композиция.png")
 
             //  Работа с графикой на стороне клиента
+
 
 
 
