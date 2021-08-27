@@ -12,6 +12,7 @@
     border: 7px solid;
     border-image: linear-gradient(to right, rgba(109, 167, 255, 0.685), rgba(250, 114, 255, 0.651)) 1%;
     position: relative;
+    overflow: hidden;
 
 }
 
@@ -200,4 +201,25 @@
     font-family: 'Old Standard TT', serif;
     font-size: 15px;
     box-shadow: inset 3px 7px 10px 3px #522643;
+}
+@media(max-width: 1200px) {
+    #canvas2{
+        height: 700px;
+    }
+    .selfeducation {
+        height: 700px;
+        font-size: 13px;
+        padding: 10px;
+        background-position: -90px 0;
+    }
+    .with_mentor {
+        height: 700px;
+        font-size: 13px;
+        padding: 10px;
+        background-position: -90px 0;
+    }
+    #canvas{
+        height: 700px;
+    }
+
 }

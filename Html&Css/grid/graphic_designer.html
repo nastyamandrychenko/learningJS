@@ -44,9 +44,97 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=PT+Serif&display=swap" rel="stylesheet">
-    
+
     <style>
-       
+        .footer {
+            background-color: rgb(29, 29, 29);
+            color: rgb(206, 206, 206);
+            display: grid;
+            grid-template-columns: 1fr 2fr 3fr 2fr 0.5fr 1fr;
+            grid-template-rows: 1fr 2fr 0.5fr 0.5fr;
+            grid-template-areas: ". . footer_menu . . ."
+                ". footer_contacts . social_networks . ."
+                ". . . subscribe subscribe ."
+                "footer_par footer_par footer_par footer_par footer_par footer_par";
+            align-items: center;
+            justify-items: center;
+        }
+
+        .footer a:hover {
+            background: linear-gradient(45deg, #83aafd 33%, #f480ff 66%, #fa3cbb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: table;
+        }
+
+        .social_networks img {
+            width: 25px;
+            height: 23px;
+        }
+
+        .social_networks {
+            grid-area: social_networks;
+            font-weight: 0;
+        }
+
+        .footer_menu {
+            grid-area: footer_menu;
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            column-gap: 20px;
+            font-size: 12px;
+
+        }
+
+        .footer_menu a {
+            text-decoration: none;
+            color: rgb(206, 206, 206);
+        }
+
+        .footer_contacts {
+            grid-area: footer_contacts;
+            font-size: 14px;
+
+        }
+
+        .footer_contacts a {
+            text-decoration: none;
+            color: rgb(206, 206, 206);
+
+        }
+
+        .subscribe {
+            grid-area: subscribe;
+            padding-bottom: 20px;
+        }
+
+        .subscribe input {
+            background-color: rgb(129, 129, 129);
+        }
+
+        .subscribe button {
+            width: 100px;
+            height: 20px;
+            border: 3px solid;
+            border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
+            background-color: rgba(184, 227, 255, 0);
+            cursor: pointer;
+            font-family: 'Old Standard TT', serif;
+            font-size: 10px;
+            color: white;
+        }
+
+        .footer_par {
+            grid-area: footer_par;
+            width: 100%;
+            background-color: black;
+            text-align: center;
+            font-size: 10px;
+            color: rgb(172, 172, 172);
+        }
+        .social_networks img{
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -54,6 +142,36 @@
 <body>
     <div class="container">
 
+        <footer class="footer">
+            <div class="footer_menu">
+                <a href="#">ШКОЛА</a>
+                <a href="#">
+                    ONLINE КУРСЫ</a>
+                <a href="#">МЕРОПРИЯТИЯ</a>
+                <a href="#">БЛОГ</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="footer_contacts">
+                <h5>Свяжитесь с нами</h5>
+                <h4><a href="#">+38 (067) 197 06 75</a></h4>
+                <h4><a href="#">+38 (095) 036 01 66</a></h4>
+                <h4><a href="#">info@digitalart.net.ua</a></h4>
+            </div>
+            <div class="social_networks">
+                <h5>Социальные сети</h5>
+                <img src="img/инстаграм.png" alt="">
+                <img src="img/фейсбук.png" alt="">
+                <img src="img/ютуб.png" alt="">
+            </div>
+            <div class="subscribe">
+                <input type="text">
+                <button>ПОДПИСАТЬСЯ</button>
+            </div>
+            <div class="footer_par">
+                <p>DA™ Education. Registered international trademark. All rights reserved.</p>
+            </div>
+
+        </footer>
 
 
         <!-- first page -->
@@ -227,10 +345,10 @@
                     </radialGradient>
                 </defs>
 
-                
-            <!-- Геолокация -->
 
-            <!-- SVG -->
+                <!-- Геолокация -->
+
+                <!-- SVG -->
 
                 <circle cx="160" cy="120" r="80" style="fill:url(#grad1)" style="position: absolute; bottom:90px;" />
             </svg>
@@ -267,7 +385,7 @@
                 <circle cx="100" cy="50" r="10" fill="url(#grad1)" />
             </svg>
 
-             <!-- SVG -->
+            <!-- SVG -->
 
 
         </main>
@@ -275,43 +393,45 @@
 
         <!-- third page -->
         <main class="third_page">
-            <canvas id="canvas" width="500px" height="850px" ></canvas>
-            <canvas id="canvas2" width="500px" height="850px" ></canvas>
+            <canvas id="canvas" width="500px" height="850px"></canvas>
+            <canvas id="canvas2" width="500px" height="850px"></canvas>
 
             <h1 class=" third_pageTitle">ВЫБЕРИТЕ ФОРМАТ ОБУЧЕНИЯ:</h1>
-                <div class="selfeducation">
-                    <h2 class="self_title">Самостоятельное обучение</h2>
-                    <p class="self_par">Смотри лекции в полном объеме и проходи курс в комфортном темпе </p>
-                    <ul class="self_list">
-                        <li>24 часа программы</li>
-                        <li>домашние работы без дедлайнов</li>
-                        <li>доступ к архиву фидбек-сессий</li>
-                        <li>чат для общения</li>
-                        <li>пожизненный доступ к материалам</li>
-                    </ul>
-                    <h2 class="self_start">Старт сразу после оплаты</h2>
-                    <h2 class="self_price">4400грн <span> цена</span></h2>
+            <div class="selfeducation">
+                <h2 class="self_title">Самостоятельное обучение</h2>
+                <p class="self_par">Смотри лекции в полном объеме и проходи курс в комфортном темпе </p>
+                <ul class="self_list">
+                    <li>24 часа программы</li>
+                    <li>домашние работы без дедлайнов</li>
+                    <li>доступ к архиву фидбек-сессий</li>
+                    <li>чат для общения</li>
+                    <li>пожизненный доступ к материалам</li>
+                </ul>
+                <h2 class="self_start">Старт сразу после оплаты</h2>
+                <h2 class="self_price">4400грн <span> цена</span></h2>
 
-                    <button class="self_button">Записаться</button>
-                </div>
-                <div class="with_mentor">
-                    <h2 class="mentor_title">Обучение с ментором</h2>
-                    <p class="mentor_par">Получай индивидуальные фидбеки на каждую работу и выполни дипломный проект
-                    </p>
-                    <ul class="mentor_list">
-                        <li>24 часа программы</li>
-                        <li>домашние задания</li>
-                        <li>«живые» вебинары с ментором</li>
-                        <li>индивидуальные фидбеки на каждую работу</li>
-                        <li>дипломный проект</li>
-                        <li>личный кабинет с техподдержкой и чатом</li>
-                        <li>пожизненный доступ к материалам</li>
-                    </ul>
-                    <h2 class="mentor_start">25 августа старт</h2>
-                    <h2 class="mentor_price">7040грн <span>цена</span></h2>
-                    <button class="mentor_button">Записаться</button>
-                </div>
+                <button class="self_button">Записаться</button>
+            </div>
+            <div class="with_mentor">
+                <h2 class="mentor_title">Обучение с ментором</h2>
+                <p class="mentor_par">Получай индивидуальные фидбеки на каждую работу и выполни дипломный проект
+                </p>
+                <ul class="mentor_list">
+                    <li>24 часа программы</li>
+                    <li>домашние задания</li>
+                    <li>«живые» вебинары с ментором</li>
+                    <li>индивидуальные фидбеки на каждую работу</li>
+                    <li>дипломный проект</li>
+                    <li>личный кабинет с техподдержкой и чатом</li>
+                    <li>пожизненный доступ к материалам</li>
+                </ul>
+                <h2 class="mentor_start">25 августа старт</h2>
+                <h2 class="mentor_price">7040грн <span>цена</span></h2>
+                <button class="mentor_button">Записаться</button>
+            </div>
         </main>
+
+
     </div>
 
 
@@ -353,7 +473,7 @@
                 context.lineWidth = 0.4;
                 context.strokeStyle = "#142129";
                 context.stroke();
-                
+
             }
             canvasCreate("#00bfff71", 100, 100, 50);
             canvasCreate("#abdfff", 200, 150, 30);
@@ -377,11 +497,11 @@
             canvasCreate("#00d9ff83", 160, 750, 30);
             canvasCreate("#2b4bff83", 300, 700, 35);
             canvasCreate("#bd2fff83", 260, 780, 15);
-            
 
-        
 
-        let canvas2 = document.getElementById("canvas2");
+
+
+            let canvas2 = document.getElementById("canvas2");
             let context2 = canvas2.getContext("2d");
 
 
@@ -395,7 +515,7 @@
                 context2.lineWidth = 0.4;
                 context2.strokeStyle = "#142129";
                 context2.stroke();
-                
+
             }
             canvasCreate2("#00bfff71", 100, 100, 50);
             canvasCreate2("#abdfff", 200, 150, 30);
@@ -422,7 +542,7 @@
             // CANVAS
         }
 
-        
+
     </script>
 </body>
 
