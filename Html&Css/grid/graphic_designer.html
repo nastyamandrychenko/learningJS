@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="first-page.css">
     <link rel="stylesheet" href="second-page.css">
     <link rel="stylesheet" href="page_map.css">
+    <link rel="stylesheet" href="third-page.css">
 
 
     <title>Graphic design courses</title>
@@ -43,203 +44,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=PT+Serif&display=swap" rel="stylesheet">
+    
     <style>
-        .third_page {
-            grid-area: third_page;
-
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 6fr 1fr;
-            grid-template-areas: "third_pageTitle third_pageTitle . ."
-                ". selfeducation with_mentor ."
-                ". . . .";
-            column-gap: 20px;
-            background-color: rgba(184, 227, 255, 0.452);
-            border: 7px solid;
-            border-image: linear-gradient(to right, rgba(109, 167, 255, 0.685), rgba(250, 114, 255, 0.651)) 1%;
-            position: relative;
-
-        }
-
-        .third_pageTitle {
-            grid-area: third_pageTitle;
-            margin-left: 20px;
-            font-family: 'Ruslan Display', cursive;
-
-        }
-
-
-        .canvas {
-            position: absolute;
-        }
-
-        .selfeducation {
-            grid-area: selfeducation;
-            background-color: rgb(255, 232, 245);
-            border-radius: 10px;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr 0.5fr 0.7fr;
-            grid-template-areas: "self_title"
-                "self_par"
-                "self_list"
-
-                "self_start"
-                "self_price"
-                "self_button";
-            background-image: url(img/div1.png);
-            box-shadow: 10px 10px 20px 2px #522643;
-            background-size: cover;
-            background-repeat: no-repeat;
-            position: relative;
-            align-items: center;
-            justify-items: center;
-        }
-
-        .self_title {
-            grid-area: self_title;
-            font-family: 'Balsamiq Sans', cursive;
-            font-family: 'PT Serif', serif;
-            padding-left: 20px;
-        }
-
-        .self_par {
-            grid-area: self_par;
-            font-family: 'PT Serif', serif;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .self_list {
-            grid-area: self_list;
-            font-family: 'Balsamiq Sans', cursive;
-            /* padding-left: 38px;
-            padding-right: 20px; */
-        }
-
-        .self_start {
-            grid-area: self_start;
-            font-family: 'Balsamiq Sans', cursive;
-
-            font-size: 20px;
-            /* padding-left: 20px;
-            padding-right: 20px; */
-            color: rgb(122, 178, 243);
-            -webkit-text-stroke: 0.5px #002231;
-        }
-
-        .self_price {
-            grid-area: self_price;
-            /* padding-left: 20px; */
-            font-size: 25px;
-            background: linear-gradient(90deg, #0e5153 33%, #4c3ae9 66%, #68d4c2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke: 1px #002231;
-
-        }
-
-        .self_price span {
-            font-size: 17px;
-
-        }
-
-
-        .self_button {
-            grid-area: self_button;
-            width: 100px;
-            height: 40px;
-            border: 3px solid;
-            border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
-            background-color: rgb(184, 227, 255);
-            cursor: pointer;
-            font-family: 'Old Standard TT', serif;
-            font-size: 15px;
-            box-shadow: inset 3px 7px 10px 3px #522643;
-
-        }
-
-        .with_mentor {
-            grid-area: with_mentor;
-            background-color: rgb(255, 232, 245);
-            border-radius: 10px;
-            box-shadow: 10px 10px 20px 2px #522643;
-            background-image: url(img/div2.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            position: relative;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr 0.5fr 0.7fr;
-            grid-template-areas: "mentor_title"
-                "mentor_par"
-                "mentor_list"
-
-                "mentor_start"
-                "mentor_price"
-                "mentor_button";
-            align-items: center;
-            justify-items: center;
-
-        }
-
-        .mentor_title {
-            grid-area: mentor_title;
-            font-family: 'Balsamiq Sans', cursive;
-            font-family: 'PT Serif', serif;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .mentor_par {
-            grid-area: mentor_par;
-            font-family: 'PT Serif', serif;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .mentor_list {
-            grid-area: mentor_list;
-            font-family: 'Balsamiq Sans', cursive;
-        }
-
-        .mentor_start {
-            grid-area: mentor_start;
-            font-family: 'Balsamiq Sans', cursive;
-
-            font-size: 20px;
-            color: rgb(122, 178, 243);
-            -webkit-text-stroke: 0.5px #002231;
-        }
-
-        .mentor_price {
-            grid-area: mentor_price;
-            /* padding-left: 20px; */
-            font-size: 25px;
-            background: linear-gradient(90deg, #0e5153 33%, #4c3ae9 66%, #68d4c2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke: 1px #002231;
-
-        }
-
-        .mentor_price span {
-            font-size: 17px;
-
-        }
-
-        .mentor_button {
-            grid-area: mentor_button;
-            width: 100px;
-            height: 40px;
-            border: 3px solid;
-            border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
-            background-color: rgb(184, 227, 255);
-            cursor: pointer;
-            font-family: 'Old Standard TT', serif;
-            font-size: 15px;
-            box-shadow: inset 3px 7px 10px 3px #522643;
-        }
+       
     </style>
 
 </head>
@@ -247,43 +54,7 @@
 <body>
     <div class="container">
 
-        <!-- third page -->
-        <main class="third_page">
-            <canvas id="canvas" width="100" height="100"></canvas>
 
-            <h1 class="third_pageTitle">ВЫБЕРИТЕ ФОРМАТ ОБУЧЕНИЯ:</h1>
-            <div class="selfeducation">
-                <h2 class="self_title">Самостоятельное обучение</h2>
-                <p class="self_par">Смотри лекции в полном объеме и проходи курс в комфортном темпе </p>
-                <ul class="self_list">
-                    <li>24 часа программы</li>
-                    <li>домашние работы без дедлайнов</li>
-                    <li>доступ к архиву фидбек-сессий</li>
-                    <li>чат для общения</li>
-                    <li>пожизненный доступ к материалам</li>
-                </ul>
-                <h2 class="self_start">Старт сразу после оплаты</h2>
-                <h2 class="self_price">4400грн <span> цена</span></h2>
-
-                <button class="self_button">Записаться</button>
-            </div>
-            <div class="with_mentor">
-                <h2 class="mentor_title">Обучение с ментором</h2>
-                <p class="mentor_par">Получай индивидуальные фидбеки на каждую работу и выполни дипломный проект </p>
-                <ul class="mentor_list">
-                    <li>24 часа программы</li>
-                    <li>домашние задания</li>
-                    <li>«живые» вебинары с ментором</li>
-                    <li>индивидуальные фидбеки на каждую работу</li>
-                    <li>дипломный проект</li>
-                    <li>личный кабинет с техподдержкой и чатом</li>
-                    <li>пожизненный доступ к материалам</li>
-                </ul>
-                <h2 class="mentor_start">25 августа старт</h2>
-                <h2 class="mentor_price">7040грн <span>цена</span></h2>
-                <button class="mentor_button">Записаться</button>
-            </div>
-        </main>
 
         <!-- first page -->
 
@@ -456,6 +227,11 @@
                     </radialGradient>
                 </defs>
 
+                
+            <!-- Геолокация -->
+
+            <!-- SVG -->
+
                 <circle cx="160" cy="120" r="80" style="fill:url(#grad1)" style="position: absolute; bottom:90px;" />
             </svg>
             <svg height="85" width="135" class="svg" style="position: absolute; bottom:90px;">
@@ -491,8 +267,51 @@
                 <circle cx="100" cy="50" r="10" fill="url(#grad1)" />
             </svg>
 
+             <!-- SVG -->
+
+
         </main>
         <!-- map page -->
+
+        <!-- third page -->
+        <main class="third_page">
+            <canvas id="canvas" width="500px" height="850px" ></canvas>
+            <canvas id="canvas2" width="500px" height="850px" ></canvas>
+
+            <h1 class=" third_pageTitle">ВЫБЕРИТЕ ФОРМАТ ОБУЧЕНИЯ:</h1>
+                <div class="selfeducation">
+                    <h2 class="self_title">Самостоятельное обучение</h2>
+                    <p class="self_par">Смотри лекции в полном объеме и проходи курс в комфортном темпе </p>
+                    <ul class="self_list">
+                        <li>24 часа программы</li>
+                        <li>домашние работы без дедлайнов</li>
+                        <li>доступ к архиву фидбек-сессий</li>
+                        <li>чат для общения</li>
+                        <li>пожизненный доступ к материалам</li>
+                    </ul>
+                    <h2 class="self_start">Старт сразу после оплаты</h2>
+                    <h2 class="self_price">4400грн <span> цена</span></h2>
+
+                    <button class="self_button">Записаться</button>
+                </div>
+                <div class="with_mentor">
+                    <h2 class="mentor_title">Обучение с ментором</h2>
+                    <p class="mentor_par">Получай индивидуальные фидбеки на каждую работу и выполни дипломный проект
+                    </p>
+                    <ul class="mentor_list">
+                        <li>24 часа программы</li>
+                        <li>домашние задания</li>
+                        <li>«живые» вебинары с ментором</li>
+                        <li>индивидуальные фидбеки на каждую работу</li>
+                        <li>дипломный проект</li>
+                        <li>личный кабинет с техподдержкой и чатом</li>
+                        <li>пожизненный доступ к материалам</li>
+                    </ul>
+                    <h2 class="mentor_start">25 августа старт</h2>
+                    <h2 class="mentor_price">7040грн <span>цена</span></h2>
+                    <button class="mentor_button">Записаться</button>
+                </div>
+        </main>
     </div>
 
 
@@ -518,10 +337,92 @@
             //  Работа с графикой на стороне клиента
 
 
+            // CANVAS
+
+            let canvas = document.getElementById("canvas");
+            let context = canvas.getContext("2d");
 
 
+            function canvasCreate(color, x, y, radius) {
+                context.beginPath();
+                context.fillStyle = color;
+                context.filter = 'blur(0.6px)';
+                context.arc(x, y, radius, 0, 2 * Math.PI, false);
+                context.closePath();
+                context.fill();
+                context.lineWidth = 0.4;
+                context.strokeStyle = "#142129";
+                context.stroke();
+                
+            }
+            canvasCreate("#00bfff71", 100, 100, 50);
+            canvasCreate("#abdfff", 200, 150, 30);
+            canvasCreate("#ff5fe483", 90, 150, 30);
+            canvasCreate("#dd57aa83", 170, 35, 30);
+            canvasCreate("#0055a583", 170, 200, 60);
+            canvasCreate("#bd04a483", 120, 290, 20);
+            canvasCreate("#00138083", 190, 340, 50);
+            canvasCreate("#00bfffa2", 160, 400, 40);
+            canvasCreate("#1cd0e783", 80, 360, 32);
+            canvasCreate("#c01ef183", 120, 470, 55);
+            canvasCreate("rgba(240, 150, 137, 0.733)", 300, 530, 80);
+            canvasCreate("#7ec9fc83", 120, 550, 30);
+            canvasCreate("#283dff83", 40, 580, 20);
+            canvasCreate("#00eeff83", 100, 650, 35);
+            canvasCreate("#ff87f583", 200, 680, 45);
+            canvasCreate("#419aff83", 120, 780, 55);
+            canvasCreate("#16476e83", 270, 400, 15);
+            canvasCreate("#ff3ab483", 20, 720, 40);
+            canvasCreate("#0245d483", 160, 820, 20);
+            canvasCreate("#00d9ff83", 160, 750, 30);
+            canvasCreate("#2b4bff83", 300, 700, 35);
+            canvasCreate("#bd2fff83", 260, 780, 15);
+            
 
+        
+
+        let canvas2 = document.getElementById("canvas2");
+            let context2 = canvas2.getContext("2d");
+
+
+            function canvasCreate2(color, x, y, radius) {
+                context2.beginPath();
+                context2.fillStyle = color;
+                context2.filter = 'blur(0.6px)';
+                context2.arc(x, y, radius, 0, 2 * Math.PI, false);
+                context2.closePath();
+                context2.fill();
+                context2.lineWidth = 0.4;
+                context2.strokeStyle = "#142129";
+                context2.stroke();
+                
+            }
+            canvasCreate2("#00bfff71", 100, 100, 50);
+            canvasCreate2("#abdfff", 200, 150, 30);
+            canvasCreate2("#ff5fe483", 90, 150, 30);
+            canvasCreate2("#dd57aa83", 170, 35, 30);
+            canvasCreate2("#0055a583", 170, 200, 60);
+            canvasCreate2("#bd04a483", 120, 290, 20);
+            canvasCreate2("#00138083", 190, 340, 50);
+            canvasCreate2("#00bfffa2", 160, 400, 40);
+            canvasCreate2("#1cd0e783", 80, 360, 32);
+            canvasCreate2("#c01ef183", 120, 470, 55);
+            canvasCreate2("rgba(240, 150, 137, 0.733)", 300, 530, 80);
+            canvasCreate2("#7ec9fc83", 120, 550, 30);
+            canvasCreate2("#283dff83", 40, 580, 20);
+            canvasCreate2("#00eeff83", 100, 650, 35);
+            canvasCreate2("#ff87f583", 200, 680, 45);
+            canvasCreate2("#419aff83", 120, 780, 55);
+            canvasCreate2("#16476e83", 270, 400, 15);
+            canvasCreate2("#0245d483", 160, 820, 20);
+            canvasCreate2("#00d9ff83", 160, 750, 30);
+            canvasCreate2("#2b4bff83", 300, 700, 35);
+            canvasCreate2("#bd2fff83", 260, 780, 15);
+
+            // CANVAS
         }
+
+        
     </script>
 </body>
 
