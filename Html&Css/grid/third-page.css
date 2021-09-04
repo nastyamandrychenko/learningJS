@@ -1,0 +1,225 @@
+.third_page {
+    grid-area: third_page;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 6fr 0.5fr;
+    grid-template-areas: "third_pageTitle third_pageTitle . ."
+        "canvas selfeducation with_mentor canvas2"
+        "canvas . . canvas2";
+    column-gap: 20px;
+    background-color: rgba(184, 227, 255, 0.452);
+    border: 7px solid;
+    border-image: linear-gradient(to right, rgba(109, 167, 255, 0.685), rgba(250, 114, 255, 0.651)) 1%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.third_pageTitle {
+    grid-area: third_pageTitle;
+    margin-left: 20px;
+    font-family: 'Ruslan Display', cursive;
+
+}
+
+
+#canvas {
+    grid-area: canvas;
+    position: absolute;
+}
+
+#canvas2 {
+    grid-area: canvas2;
+    position: absolute;
+    transform: scale(180deg);
+}
+
+.selfeducation {
+    grid-area: selfeducation;
+    background-color: rgb(255, 232, 245);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr 0.5fr 0.7fr;
+    grid-template-areas: "self_title"
+        "self_par"
+        "self_list"
+
+        "self_start"
+        "self_price"
+        "self_button";
+    background-image: url(img/div1.png);
+    box-shadow: 10px 10px 20px 2px #522643;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    align-items: center;
+    justify-items: center;
+}
+
+.self_title {
+    grid-area: self_title;
+    font-family: 'Balsamiq Sans', cursive;
+    font-family: 'PT Serif', serif;
+    padding-left: 20px;
+}
+
+.self_par {
+    grid-area: self_par;
+    font-family: 'PT Serif', serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.self_list {
+    grid-area: self_list;
+    font-family: 'Balsamiq Sans', cursive;
+    /* padding-left: 38px;
+    padding-right: 20px; */
+}
+
+.self_start {
+    grid-area: self_start;
+    font-family: 'Balsamiq Sans', cursive;
+
+    font-size: 20px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    color: rgb(122, 178, 243);
+    -webkit-text-stroke: 0.5px #002231;
+}
+
+.self_price {
+    grid-area: self_price;
+    /* padding-left: 20px; */
+    font-size: 25px;
+    background: linear-gradient(90deg, #0e5153 33%, #4c3ae9 66%, #68d4c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #002231;
+
+}
+
+.self_price span {
+    font-size: 17px;
+
+}
+
+
+.self_button {
+    grid-area: self_button;
+    width: 100px;
+    height: 40px;
+    border: 3px solid;
+    border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
+    background-color: rgb(184, 227, 255);
+    cursor: pointer;
+    font-family: 'Old Standard TT', serif;
+    font-size: 15px;
+    box-shadow: inset 3px 7px 10px 3px #522643;
+
+}
+
+.with_mentor {
+    grid-area: with_mentor;
+    background-color: rgb(255, 232, 245);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 2px #522643;
+    background-image: url(img/div2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr 0.5fr 0.7fr;
+    grid-template-areas: "mentor_title"
+        "mentor_par"
+        "mentor_list"
+
+        "mentor_start"
+        "mentor_price"
+        "mentor_button";
+    align-items: center;
+    justify-items: center;
+
+}
+
+.mentor_title {
+    grid-area: mentor_title;
+    font-family: 'Balsamiq Sans', cursive;
+    font-family: 'PT Serif', serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mentor_par {
+    grid-area: mentor_par;
+    font-family: 'PT Serif', serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mentor_list {
+    grid-area: mentor_list;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.mentor_start {
+    grid-area: mentor_start;
+    font-family: 'Balsamiq Sans', cursive;
+
+    font-size: 20px;
+    color: rgb(122, 178, 243);
+    -webkit-text-stroke: 0.5px #002231;
+}
+
+.mentor_price {
+    grid-area: mentor_price;
+    /* padding-left: 20px; */
+    font-size: 25px;
+    background: linear-gradient(90deg, #0e5153 33%, #4c3ae9 66%, #68d4c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #002231;
+
+}
+
+.mentor_price span {
+    font-size: 17px;
+
+}
+
+.mentor_button {
+    grid-area: mentor_button;
+    width: 100px;
+    height: 40px;
+    border: 3px solid;
+    border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
+    background-color: rgb(184, 227, 255);
+    cursor: pointer;
+    font-family: 'Old Standard TT', serif;
+    font-size: 15px;
+    box-shadow: inset 3px 7px 10px 3px #522643;
+}
+@media(max-width: 1200px) {
+    #canvas2{
+        height: 700px;
+    }
+    .selfeducation {
+        height: 700px;
+        font-size: 13px;
+        padding: 10px;
+        background-position: -90px 0;
+    }
+    .with_mentor {
+        height: 700px;
+        font-size: 13px;
+        padding: 10px;
+        background-position: -90px 0;
+    }
+    #canvas{
+        height: 700px;
+    }
+
+}

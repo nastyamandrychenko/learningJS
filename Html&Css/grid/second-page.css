@@ -1,0 +1,70 @@
+.second-page {
+    background-color: rgba(255, 196, 223, 0.582);
+    grid-area: second-page;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 4fr;
+    grid-template-rows: 1fr 0.3fr 0.5fr;
+    grid-template-areas: ". second-page-h1 second-page-h1 second-page-h1 img-secondPage"
+        ". second-paragraph second-paragraph second-paragraph img-secondPage"
+        ". second-shadow second-composition second-color img-secondPage";
+    align-items: center;
+    justify-items: center;
+    border: 7px solid;
+    
+    
+    border-image: linear-gradient(to right, rgba(109, 167, 255, 0.685), rgba(250, 114, 255, 0.651)) 1%;
+
+
+}
+
+
+
+.second-paragraph {
+    grid-area: second-paragraph;
+    width: 400px;
+    font-family: 'Cormorant SC', serif;
+}
+
+.second-page-h1 {
+    grid-area: second-page-h1;
+    font-family: 'Ruslan Display', cursive;
+    margin-left: 25px;
+}
+
+#img-secondPage {
+    width: 500px;
+    grid-area: img-secondPage;
+
+}
+
+#second-shadow {
+    grid-area: second-shadow;
+    border: 3px solid;
+    border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    font-family: 'Old Standard TT', serif;
+    width: 100px;
+
+
+}
+
+#second-color {
+    grid-area: second-color;
+    border: 3px solid;
+    border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    font-family: 'Old Standard TT', serif;
+    width: 100px;
+}
+
+#second-composition {
+    grid-area: second-composition;
+    border: 3px solid;
+    border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    font-family: 'Old Standard TT', serif;
+    width: 145px;
+}

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="first-page.css">
+    <link rel="stylesheet" href="second-page.css">
+    <link rel="stylesheet" href="page_map.css">
+    <link rel="stylesheet" href="third-page.css">
+
+
+    <title>Graphic design courses</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=PT+Serif&display=swap" rel="stylesheet">
+
+    <style>
+        .footer {
+            background-color: rgb(29, 29, 29);
+            color: rgb(206, 206, 206);
+            display: grid;
+            grid-template-columns: 1fr 2fr 3fr 2fr 0.5fr 1fr;
+            grid-template-rows: 1fr 2fr 0.5fr 0.5fr;
+            grid-template-areas: ". . footer_menu . . ."
+                ". footer_contacts . social_networks . ."
+                ". . . subscribe subscribe ."
+                "footer_par footer_par footer_par footer_par footer_par footer_par";
+            align-items: center;
+            justify-items: center;
+        }
+
+        .footer a:hover {
+            background: linear-gradient(45deg, #83aafd 33%, #f480ff 66%, #fa3cbb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: table;
+        }
+
+        .social_networks img {
+            width: 25px;
+            height: 23px;
+        }
+
+        .social_networks {
+            grid-area: social_networks;
+            font-weight: 0;
+        }
+
+        .footer_menu {
+            grid-area: footer_menu;
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            column-gap: 20px;
+            font-size: 12px;
+
+        }
+
+        .footer_menu a {
+            text-decoration: none;
+            color: rgb(206, 206, 206);
+        }
+
+        .footer_contacts {
+            grid-area: footer_contacts;
+            font-size: 14px;
+
+        }
+
+        .footer_contacts a {
+            text-decoration: none;
+            color: rgb(206, 206, 206);
+
+        }
+
+        .subscribe {
+            grid-area: subscribe;
+            padding-bottom: 20px;
+        }
+
+        .subscribe input {
+            background-color: rgb(129, 129, 129);
+        }
+
+        .subscribe button {
+            width: 100px;
+            height: 20px;
+            border: 3px solid;
+            border-image: linear-gradient(to left, rgb(109, 167, 255), rgb(250, 114, 255)) 1%;
+            background-color: rgba(184, 227, 255, 0);
+            cursor: pointer;
+            font-family: 'Old Standard TT', serif;
+            font-size: 10px;
+            color: white;
+        }
+
+        .footer_par {
+            grid-area: footer_par;
+            width: 100%;
+            background-color: black;
+            text-align: center;
+            font-size: 10px;
+            color: rgb(172, 172, 172);
+        }
+        .social_networks img{
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <footer class="footer">
+            <div class="footer_menu">
+                <a href="#">ШКОЛА</a>
+                <a href="#">
+                    ONLINE КУРСЫ</a>
+                <a href="#">МЕРОПРИЯТИЯ</a>
+                <a href="#">БЛОГ</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="footer_contacts">
+                <h5>Свяжитесь с нами</h5>
+                <h4><a href="#">+38 (067) 197 06 75</a></h4>
+                <h4><a href="#">+38 (095) 036 01 66</a></h4>
+                <h4><a href="#">info@digitalart.net.ua</a></h4>
+            </div>
+            <div class="social_networks">
+                <h5>Социальные сети</h5>
+                <img src="img/инстаграм.png" alt="">
+                <img src="img/фейсбук.png" alt="">
+                <img src="img/ютуб.png" alt="">
+            </div>
+            <div class="subscribe">
+                <input type="text">
+                <button>ПОДПИСАТЬСЯ</button>
+            </div>
+            <div class="footer_par">
+                <p>DA™ Education. Registered international trademark. All rights reserved.</p>
+            </div>
+
+        </footer>
+
+
+        <!-- first page -->
+
+        <header class="headert">
+
+            <!-- svg -->
+
+            <svg class="svg" style="width: 170px; height: 120px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+
+                <circle cx="160" cy="120" r="80" style="fill:url(#grad1)" style="position: absolute; bottom:90px;" />
+            </svg>
+
+
+            <svg height="85" width="135" class="svg" style="position: absolute; bottom:90px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="50" r="30" fill="url(#grad1)" />
+            </svg>
+
+            <svg height="85" width="135" class="svg" style="position: absolute; bottom:40px; right:30px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="50" r="20" fill="url(#grad1)" />
+            </svg>
+
+            <svg height="85" width="135" class="svg" style="position: absolute; bottom:40px; right:60px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="50" r="10" fill="url(#grad1)" />
+            </svg>
+
+            <svg height="220" width="220" class="svg"
+                style="position: absolute; top:120px; left:0px; transform: rotate(180deg); ">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.37);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="160" cy="120" r="50" fill="url(#grad1)" />
+            </svg>
+
+            <svg height="85" width="135" class="svg" style="position: absolute; top:60px; left:0px; ">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.377);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="50" r="30" fill="url(#grad1)" />
+            </svg>
+
+            <svg height="85" width="135" class="svg" style="position: absolute; top:100px; left:70px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="50" r="20" fill="url(#grad1)" />
+            </svg>
+
+            <svg height="85" width="135" class="svg" style="position: absolute; bottom:100px; left:70px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="50" r="20" fill="url(#grad1)" />
+            </svg>
+
+
+            <!-- svg -->
+
+
+
+            <a href="#" class="logo"><img class="img-logo" src="img/logo.png" alt=""></a>
+            <div class="headernav">
+                <a href="#" class="nav-link">Курсы &#9660;</a>
+                <a href="#" class="nav-link">Мероприятия</a>
+                <a href="#" class="nav-link">Блог</a>
+                <a href="#" class="nav-link">О нас</a>
+                <a href="#" class="nav-link">Отзывы</a>
+                <a href="#" class="nav-link">Контакты</a>
+                <a href="#" class="nav-link">Вакансии</a>
+            </div>
+            <div class="headertext">
+                <h1 class="header-title">Цифровой рисунок <span class="online">Online</span></h1>
+                <p class="header-par">ПРОЙДИ ПУТЬ ОТ ПЕРВОЙ ЛИНИИ ДО ПОЛНОЦЕННОГО АРТА</p>
+            </div>
+
+
+        </header>
+
+        <!-- first page -->
+
+
+        <!-- second page -->
+
+        <main class="second-page">
+
+            <!-- <canvas id="canvas" height="300" width="300">
+                Ваш браузер не поддерживает элемент <i>Canvas</i>
+            </canvas> -->
+
+            <h1 class="second-page-h1">Чему учим на занятиях?</h1>
+            <p class="second-paragraph">За время обучения ты освоишь ключевые навыки цифрового артиста — работу с линией
+                и формой, светом и
+                цветом, композицией и перспективой. Также вдоволь попрактикуешься: подготовишь 50+ рисованных объектов и
+                создашь несколько полноценных иллюстраций. А еще получишь базу для дальнейшего развития в игровом арте,
+                комиксах, дизайне персонажей, концепте окружения и других сферах компьютерной графики.</p>
+            <img id="img-secondPage" src="img/чему учим.png" alt="">
+            <button id="second-shadow">Свет и тень</button>
+            <button id="second-color">Все о цвете</button>
+            <button id="second-composition">Основы композиции</button>
+        </main>
+
+        <!-- second page -->
+
+
+
+
+
+
+        <!-- map page -->
+        <main class="page_map">
+
+
+
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1347.7803489897728!2d19.070394598552994!3d47.498470772213565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc66e2a0e799%3A0x3b24d300deeee120!2z0J3RjNGOLdCZ0L7RgNC6!5e0!3m2!1sru!2sua!4v1629912136944!5m2!1sru!2sua"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <!-- Геолокация -->
+
+            <h2 class="title-map">FIND US ON THE MAP</h2>
+            <svg class="svg" style="width: 170px; height: 120px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+
+
+                <!-- Геолокация -->
+
+                <!-- SVG -->
+
+                <circle cx="160" cy="120" r="80" style="fill:url(#grad1)" style="position: absolute; bottom:90px;" />
+            </svg>
+            <svg height="85" width="135" class="svg" style="position: absolute; bottom:90px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="50" r="30" fill="url(#grad1)" />
+            </svg>
+
+            <svg height="85" width="135" class="svg" style="position: absolute; top:50px; right:30px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="50" r="20" fill="url(#grad1)" />
+            </svg>
+
+            <svg height="85" width="135" class="svg" style="position: absolute; bottom:40px; right:60px;">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgba(136, 183, 253, 0.486);
+                    stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgba(251, 137, 255, 0.479);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="50" r="10" fill="url(#grad1)" />
+            </svg>
+
+            <!-- SVG -->
+
+
+        </main>
+        <!-- map page -->
+
+        <!-- third page -->
+        <main class="third_page">
+            <canvas id="canvas" width="500px" height="850px"></canvas>
+            <canvas id="canvas2" width="500px" height="850px"></canvas>
+
+            <h1 class=" third_pageTitle">ВЫБЕРИТЕ ФОРМАТ ОБУЧЕНИЯ:</h1>
+            <div class="selfeducation">
+                <h2 class="self_title">Самостоятельное обучение</h2>
+                <p class="self_par">Смотри лекции в полном объеме и проходи курс в комфортном темпе </p>
+                <ul class="self_list">
+                    <li>24 часа программы</li>
+                    <li>домашние работы без дедлайнов</li>
+                    <li>доступ к архиву фидбек-сессий</li>
+                    <li>чат для общения</li>
+                    <li>пожизненный доступ к материалам</li>
+                </ul>
+                <h2 class="self_start">Старт сразу после оплаты</h2>
+                <h2 class="self_price">4400грн <span> цена</span></h2>
+
+                <button class="self_button">Записаться</button>
+            </div>
+            <div class="with_mentor">
+                <h2 class="mentor_title">Обучение с ментором</h2>
+                <p class="mentor_par">Получай индивидуальные фидбеки на каждую работу и выполни дипломный проект
+                </p>
+                <ul class="mentor_list">
+                    <li>24 часа программы</li>
+                    <li>домашние задания</li>
+                    <li>«живые» вебинары с ментором</li>
+                    <li>индивидуальные фидбеки на каждую работу</li>
+                    <li>дипломный проект</li>
+                    <li>личный кабинет с техподдержкой и чатом</li>
+                    <li>пожизненный доступ к материалам</li>
+                </ul>
+                <h2 class="mentor_start">25 августа старт</h2>
+                <h2 class="mentor_price">7040грн <span>цена</span></h2>
+                <button class="mentor_button">Записаться</button>
+            </div>
+        </main>
+
+
+    </div>
+
+
+    <script>
+        window.onload = function () {
+            const shadow = document.getElementById('second-shadow');
+            const color = document.getElementById('second-color');
+            const composition = document.getElementById('second-composition');
+
+            //  Работа с графикой на стороне клиента
+
+            function onclickImg(name, img) {
+                name.onclick = function () {
+                    const imageArea = document.getElementById('img-secondPage');
+                    imageArea.src = img
+                    console.log("dd")
+                }
+            }
+            onclickImg(shadow, "img/тени и свет.png");
+            onclickImg(color, "img/цвет.png");
+            onclickImg(composition, "img/композиция.png")
+
+            //  Работа с графикой на стороне клиента
+
+
+            // CANVAS
+
+            let canvas = document.getElementById("canvas");
+            let context = canvas.getContext("2d");
+
+
+            function canvasCreate(color, x, y, radius) {
+                context.beginPath();
+                context.fillStyle = color;
+                context.filter = 'blur(0.6px)';
+                context.arc(x, y, radius, 0, 2 * Math.PI, false);
+                context.closePath();
+                context.fill();
+                context.lineWidth = 0.4;
+                context.strokeStyle = "#142129";
+                context.stroke();
+
+            }
+            canvasCreate("#00bfff71", 100, 100, 50);
+            canvasCreate("#abdfff", 200, 150, 30);
+            canvasCreate("#ff5fe483", 90, 150, 30);
+            canvasCreate("#dd57aa83", 170, 35, 30);
+            canvasCreate("#0055a583", 170, 200, 60);
+            canvasCreate("#bd04a483", 120, 290, 20);
+            canvasCreate("#00138083", 190, 340, 50);
+            canvasCreate("#00bfffa2", 160, 400, 40);
+            canvasCreate("#1cd0e783", 80, 360, 32);
+            canvasCreate("#c01ef183", 120, 470, 55);
+            canvasCreate("rgba(240, 150, 137, 0.733)", 300, 530, 80);
+            canvasCreate("#7ec9fc83", 120, 550, 30);
+            canvasCreate("#283dff83", 40, 580, 20);
+            canvasCreate("#00eeff83", 100, 650, 35);
+            canvasCreate("#ff87f583", 200, 680, 45);
+            canvasCreate("#419aff83", 120, 780, 55);
+            canvasCreate("#16476e83", 270, 400, 15);
+            canvasCreate("#ff3ab483", 20, 720, 40);
+            canvasCreate("#0245d483", 160, 820, 20);
+            canvasCreate("#00d9ff83", 160, 750, 30);
+            canvasCreate("#2b4bff83", 300, 700, 35);
+            canvasCreate("#bd2fff83", 260, 780, 15);
+
+
+
+
+            let canvas2 = document.getElementById("canvas2");
+            let context2 = canvas2.getContext("2d");
+
+
+            function canvasCreate2(color, x, y, radius) {
+                context2.beginPath();
+                context2.fillStyle = color;
+                context2.filter = 'blur(0.6px)';
+                context2.arc(x, y, radius, 0, 2 * Math.PI, false);
+                context2.closePath();
+                context2.fill();
+                context2.lineWidth = 0.4;
+                context2.strokeStyle = "#142129";
+                context2.stroke();
+
+            }
+            canvasCreate2("#00bfff71", 100, 100, 50);
+            canvasCreate2("#abdfff", 200, 150, 30);
+            canvasCreate2("#ff5fe483", 90, 150, 30);
+            canvasCreate2("#dd57aa83", 170, 35, 30);
+            canvasCreate2("#0055a583", 170, 200, 60);
+            canvasCreate2("#bd04a483", 120, 290, 20);
+            canvasCreate2("#00138083", 190, 340, 50);
+            canvasCreate2("#00bfffa2", 160, 400, 40);
+            canvasCreate2("#1cd0e783", 80, 360, 32);
+            canvasCreate2("#c01ef183", 120, 470, 55);
+            canvasCreate2("rgba(240, 150, 137, 0.733)", 300, 530, 80);
+            canvasCreate2("#7ec9fc83", 120, 550, 30);
+            canvasCreate2("#283dff83", 40, 580, 20);
+            canvasCreate2("#00eeff83", 100, 650, 35);
+            canvasCreate2("#ff87f583", 200, 680, 45);
+            canvasCreate2("#419aff83", 120, 780, 55);
+            canvasCreate2("#16476e83", 270, 400, 15);
+            canvasCreate2("#0245d483", 160, 820, 20);
+            canvasCreate2("#00d9ff83", 160, 750, 30);
+            canvasCreate2("#2b4bff83", 300, 700, 35);
+            canvasCreate2("#bd2fff83", 260, 780, 15);
+
+            // CANVAS
+        }
+
+
+    </script>
+</body>
+
+</html>
