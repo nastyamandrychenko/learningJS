@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+
+            background-image: url(img/Custom\ made\ Chinoiserie\ handpainted\ wallpaper\ with\ partial\ _\ Etsy.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+
+        }
+
+        .clock {
+            width: 470px;
+            height: 470px;
+            background-color: black;
+            background-image: url(img/kisspng-clock-face-pendulum-clock-antique-time-antique-pattern-5adb0194b2a9e0.9674420615243022287318.png);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            box-shadow: 0 0 20px black;
+            border-radius: 50%;
+            position: relative;
+        }
+
+
+        .hand-1,
+        .hour-hand {
+            width: 160px;
+            height: 160px;
+        }
+
+        .hand-2,
+        .minute-hand {
+            width: 200px;
+            height: 200px;
+        }
+
+        .hand-3,
+        .second-hand {
+            width: 250px;
+            height: 250px;
+        }
+
+        .hand-1,
+        .hand-2,
+        .hand-3 {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        #hand-1 {
+            position: absolute;
+            top: -111px;
+            
+        }
+
+        #hand-2 {
+            position: absolute;
+            top: -26px;
+    right: 51px;
+        }
+
+        #hand-3 {
+            position: absolute;
+            top: -3px;
+        }
+        .center{
+            position: absolute;
+            width: 37px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+
+        <div class="hand-1"><img id="hand-1" src="img/hour.png" alt=""></div>
+
+
+        <div class="hand-2"><img id="hand-2" src="img/Q4pxb.png" alt=""></div>
+
+        <div class="hand-3"><img id="hand-3" src="img/sec.png" alt=""></div>
+        <img class="center" src="img/center.png" alt="">
+
+    </div>
+
+    <script>
+        const hour = document.getElementById("hand-1");
+        const minute = document.getElementById("hand-2");
+        const second = document.getElementById("hand-3");
+        const degrees = 6;
+
+        setInterval(() => {
+            let date = new Date();
+            let hours = date.getHours() * 30;
+            // let hours = date.getSeconds() * degrees;
+            let min = date.getMinutes() * degrees;
+            let sec = date.getSeconds() * degrees;
+
+            hour.style.transform = `rotateZ(${(hours)}deg)`;
+            minute.style.transform = `rotateZ(${min}deg)`;
+            second.style.transform = `rotateZ(${sec}deg)`;
+        })
+  
+    </script>
+</body>
+
+</html>
