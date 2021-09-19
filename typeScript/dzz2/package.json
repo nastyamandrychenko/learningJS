@@ -1,5 +1,5 @@
 {
-  "name": "dz2",
+  "name": "dz1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,10 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "gulp": "^4.0.2"
-  },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "gulp-typescript": "^6.0.0-alpha.1",
     "typescript": "^4.4.3"
   }
